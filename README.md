@@ -21,4 +21,4 @@ Explore my portfolio to see my work in action and discover the projects I’m pr
 - Tools: Git, GitHub Pages, VS Code
 - Design: Responsive layouts, animations, and interactive UI
 
-<img width="1892" height="926" alt="image" src="https://github.com/user-attachments/assets/5a323249-eb11-4e47-8ad8-2ef3c1df1996" />
+<img width="1893" height="928" alt="image" src="https://github.com/user-attachments/assets/3caa2557-3272-4514-87bb-f70ee2ac4502" />
