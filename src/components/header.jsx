@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import soniclogo from "../img/shadow.gif";
-
 
 export default function Header({ username = "guilhermeteixeira01", repo = "Portfolio" }) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +34,6 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
     return (
         <header>
             <div className="logodiv">
-                <img src={soniclogo} className="SonicLogo" />
                 <h1 className="Title">Guilherme Teixeira</h1>
             </div>
 

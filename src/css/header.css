@@ -34,7 +34,7 @@ header {
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    cursor: pointer;
+    cursor: text;
     color: var(--colorprimary);
 }
 
@@ -45,32 +45,12 @@ header {
     bottom: -5px;
     width: 0%;
     height: 3px;
-    background: linear-gradient(90deg,
-            #000000,
-            #ff0000,
-            #ffffff,
-            #ffd700);
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(30, 136, 229, 0.5));
     transition: width 0.5s ease;
 }
 
 .Title:hover::after {
     width: 100%;
-}
-
-.SonicLogo {
-    width: 80px;
-    filter: drop-shadow(0 0 8px #ff1e1e88);
-    animation: sonicGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes sonicGlow {
-    from {
-        filter: drop-shadow(0 0 6px #ff1e1e88);
-    }
-
-    to {
-        filter: drop-shadow(0 0 10px #ff000088);
-    }
 }
 
 /* button theme switch */
@@ -334,10 +314,6 @@ header {
     }
 
     .Title {
-        display: none;
-    }
-
-    .SonicLogo {
         display: none;
     }
 

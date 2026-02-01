@@ -79,13 +79,6 @@ section {
     padding: 50px;
 }
 
-.My h3 {
-    font-size: 50px;
-    font-weight: 400;
-    color: #aaa;
-    margin-bottom: 15px;
-}
-
 .My h1 {
     font-size: 80px;
     margin: 0;
@@ -103,6 +96,39 @@ section {
     margin: 25px 0 40px 0;
 }
 
+.My .boxname {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+}
+
+.My .boxname h3 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #aaa;
+    margin-bottom: 15px;
+    margin-top: auto;
+}
+
+.My .boxname img {
+    margin-left: 10px;
+    width: 120px;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255)) drop-shadow(0 0 5px rgb(255, 255, 255));
+    animation: shadowPower 6s ease-in-out infinite;
+}
+
+@keyframes shadowPower {
+
+    0% {
+        filter: drop-shadow(0 0 2px rgb(255, 255, 255)) drop-shadow(0 0 5px rgb(255, 255, 255));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 4px rgb(255, 1, 1)) drop-shadow(0 0 10px rgb(104, 0, 0));
+    }
+}
+
 /* BOTÕES */
 
 .boxbuttons {
@@ -110,23 +136,38 @@ section {
 }
 
 .My .Resume {
+    position: relative;
     width: 100%;
     padding: 16px 28px;
     margin-bottom: 16px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(90deg, #1565c0, #1e88e5);
+    background: linear-gradient(90deg, #c01515, #1e88e5);
     color: white;
     font-weight: 700;
     font-size: 18px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.5);
+}
+
+.My .Resume::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    right: -10px;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(30, 136, 229, 0.5));
+    filter: blur(20px);
+    z-index: -1;
+    border-radius: 10px;
 }
 
 .My .Resume:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(30, 136, 229, 0.7);
+    background: linear-gradient(90deg, #1e88e5, #1e88e5);
+}
+
+.My .Resume:hover::before {
+    background: linear-gradient(to right, rgba(30, 136, 229, 0.5), rgba(30, 136, 229, 0.5));
 }
 
 .My .midiasocial {
@@ -301,5 +342,21 @@ section {
 
     .box img {
         max-width: 300px;
+    }
+
+    .My .boxname {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .My .boxname h3 {
+        font-size: 30px;
+        margin-top: center;
+    }
+
+    .My .boxname img {
+        margin-bottom: 10px;
+        width: 80px;
+        filter: drop-shadow(0 0 1px rgb(255, 255, 255)) drop-shadow(0 0 2px rgb(255, 255, 255));
     }
 }
