@@ -26,21 +26,20 @@ export default function StarCanvas() {
     function createSonic() {
         return {
             id: Date.now() + Math.random(),
-            x: -150, // começa fora da tela
+            x: -10, // começa fora da tela
             y: Math.random() * canvasSize.height * 0.7,
-            speed: 2 + Math.random() * 2, // velocidade lenta, aleatória
-            size: 30 + Math.random() * 40,
+            speed: 1 + Math.random() * 2, // velocidade lenta e natural
+            size: 30 + Math.random() * 50, // tamanho aleatório entre 30px e 80px
         };
     }
 
-    // Adiciona um Sonic a cada 10s (ou no início)
+
     useEffect(() => {
-        // cria o primeiro Sonic imediatamente
         setSonics([createSonic()]);
 
         const interval = setInterval(() => {
             setSonics(prev => [...prev, createSonic()]);
-        }, 15000); // a cada 15 segundos
+        }, 15000);
 
         return () => clearInterval(interval);
     }, [canvasSize]);
@@ -52,8 +51,8 @@ export default function StarCanvas() {
         function animate() {
             setSonics(prev =>
                 prev
-                    .map(s => ({ ...s, x: s.x + s.speed })) // move cada Sonic
-                    .filter(s => s.x < canvasSize.width + 150) // remove se saiu da tela
+                    .map(s => ({ ...s, x: s.x + s.speed }))
+                    .filter(s => s.x < canvasSize.width + s.size)
             );
 
             requestId = requestAnimationFrame(animate);
@@ -66,10 +65,8 @@ export default function StarCanvas() {
 
     return (
         <div style={{ position: "absolute", width: "100vw", height: "100vh", overflow: "hidden" }}>
-            {/* Canvas das estrelas */}
             <canvas ref={canvasRef} style={{ display: "block", position: "absolute", top: 0, left: 0, zIndex: 1 }} />
 
-            {/* Renderiza todos os Sonics ativos */}
             {sonics.map(s => (
                 <img
                     key={s.id}
@@ -83,7 +80,7 @@ export default function StarCanvas() {
                         height: `${s.size}px`,
                         zIndex: -1,
                         pointerEvents: "none",
-                        transition: "transform 0.1s linear", // suaviza movimentos
+                        transition: "transform 0.1s linear",
                     }}
                 />
             ))}
