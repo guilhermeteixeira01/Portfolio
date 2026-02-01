@@ -65,7 +65,7 @@ export default function StarCanvas() {
 
     return (
         <div style={{ position: "absolute", width: "100vw", height: "100vh", overflow: "hidden" }}>
-            <canvas ref={canvasRef} style={{ display: "block", position: "absolute", top: 0, left: 0, zIndex: 1 }} />
+            <canvas ref={canvasRef} style={{ display: "block", position: "absolute", top: 0, left: 0, zIndex: -1 }} />
 
             {sonics.map(s => (
                 <img

@@ -1,14 +1,12 @@
-.second-section {
+/* Container da barra de skills */
+.skills {
+    position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 90%;
 }
 
-.second-section h1 {
-    color: var(--colorprimary);
-    font-size: 80px;
-}
-
-/* Container da barra de skills */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));

@@ -34,8 +34,8 @@ function App() {
           pointerEvents: "none"
         }}
       />
-      <StarCanvas />
       {/* Conteúdo do site */}
+      <StarCanvas />
       <Header />
       <Main />
     </div>

@@ -15,19 +15,16 @@ section {
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-    z-index: 2;
 }
 
 .second-section {
-    z-index: 2;
-}
-
-.skills {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 90%;
+}
+
+.second-section h1 {
+    color: var(--colorprimary);
+    font-size: 80px;
 }
 
 .scroll-indicator {
@@ -286,7 +283,7 @@ section {
     }
 
     .first-section .scroll-indicator {
-        bottom: -20px;
+        display: none;
     }
 
     .skills {

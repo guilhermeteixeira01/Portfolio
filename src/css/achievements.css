@@ -14,7 +14,7 @@
     -webkit-backdrop-filter: blur(10px);
     width: 100vw;
     height: 100vh;
-    z-index: 100;
+    z-index: 101;
 }
 
 .title::after {
@@ -150,7 +150,6 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
 }
 
 .boxgalaxybrain .card {
@@ -207,7 +206,6 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
 }
 
 .boxpairextraordinaire .card {
@@ -269,7 +267,6 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
 }
 
 .boxpullshark .card {
@@ -330,7 +327,6 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
 }
 
 .boxquickdraw .card {
@@ -392,7 +388,6 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
 }
 
 .boxyolo .card {
@@ -451,7 +446,6 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
 }
 
 .boxstarstruck .card {
