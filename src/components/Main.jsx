@@ -13,7 +13,7 @@ export default function Main() {
                 <h1>Guilherme Teixeira</h1>
                 <h4>A Full Stack Web Developer</h4>
 
-                <button className="Resume" onClick={() => window.open("/resume.pdf", "_blank")}>Resume</button>
+                <button className="Resume" onClick={() => window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank")}>Resume</button>
                 <div className="midiasocial">
                     <button className="iconBtn hireme">Hire Me</button>
                     <button className="iconBtn github" aria-label="GitHub" onClick={() => window.open("https://github.com/guilhermeteixeira01", "_blank")}>
