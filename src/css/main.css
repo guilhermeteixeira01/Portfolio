@@ -1,4 +1,5 @@
 section {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -7,6 +8,63 @@ section {
     gap: 60px;
     box-sizing: border-box;
 }
+
+/* Indicador só na primeira section */
+.first-section .scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.scroll-indicator {
+    transition: opacity 0.25s ease;
+}
+
+/* Corpo do "mouse" */
+.mouse {
+    width: 26px;
+    height: 56px;
+    border: 2px solid white;
+    border-radius: 26px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    box-sizing: border-box;
+}
+
+/* Bolinha redonda */
+.wheel {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: scrollWheel 1.8s infinite ease-in-out;
+}
+
+/* Animação descendo com percurso maior */
+@keyframes scrollWheel {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.6;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(26px);
+    }
+}
+
 
 /* LADO ESQUERDO — TEXTO */
 .My {
@@ -110,7 +168,7 @@ section {
 
 .box .Perfil {
     width: 100%;
-    max-width: 420px;
+    max-width: 390px;
     border-radius: 20px;
     animation: rainbowGlow 5s linear infinite;
     transition: transform 0.4s ease;
@@ -203,6 +261,10 @@ section {
         flex-direction: column;
         text-align: center;
         margin-top: 100px;
+    }
+
+    .first-section .scroll-indicator {
+        bottom: -20px;
     }
 
     .My,

@@ -1,0 +1,639 @@
+#galaxybrain,
+#pairextraordinaire,
+#pullshark,
+#quickdraw,
+#yolo,
+#starstruck {
+    cursor: pointer;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+}
+
+.link {
+    position: absolute;
+    bottom: 20px;
+}
+
+a {
+    color: #4493f8;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.unlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    fill: #9198a1;
+    width: 100%;
+}
+
+.unlock>p {
+    color: #9198a1;
+}
+
+.linkref {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    fill: #9198a1;
+    width: 100%;
+}
+
+.timeline2 {
+    fill: #9198a1;
+}
+
+.timeline2::after {
+    background-color: #9198a1;
+    bottom: 12px;
+    content: '';
+    display: block;
+    left: 7px;
+    position: absolute;
+    width: 2px;
+    height: 15%;
+}
+
+.title::after {
+    background-color: #9198a1;
+    content: '';
+    display: block;
+    width: 410px;
+    position: relative;
+    height: 1px;
+    bottom: -10px;
+}
+
+/* Galaxy Brain */
+
+.boxgalaxybrain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.boxgalaxybrain .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/galaxy-brain-detail.png);
+}
+
+.boxgalaxybrain .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxgalaxybrain .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.boxgalaxybrain .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxgalaxybrain .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+/* Pair Extraordinaire */
+
+.boxpairextraordinaire {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.boxpairextraordinaire .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/pair-extraordinaire-detail.png);
+}
+
+.boxpairextraordinaire .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxpairextraordinaire .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxpairextraordinaire .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxpairextraordinaire .info p {
+    width: 100%;
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxpairextraordinaire .info p span {
+    color: #9198a1;
+}
+
+/* Pull Shark */
+
+.boxpullshark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.boxpullshark .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/pull-shark-detail.png);
+}
+
+.boxpullshark .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxpullshark .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxpullshark .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxpullshark .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxpullshark .info p span {
+    color: #9198a1;
+}
+
+/* Quick Draw */
+
+.boxquickdraw {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.boxquickdraw .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/quickdraw-detail.png);
+}
+
+.boxquickdraw .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxquickdraw .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxquickdraw .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxquickdraw .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxquickdraw .info p span {
+    color: #9198a1;
+}
+
+.boxquickdraw .timeline2 {
+    fill: #9198a1;
+}
+
+.boxquickdraw .timeline2::after {
+    background-color: #9198a1;
+    bottom: 20px;
+    content: '';
+    display: block;
+    left: 7px;
+    position: absolute;
+    width: 2px;
+    height: 24%;
+}
+
+.boxquickdraw .linkref {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    fill: #9198a1;
+    width: 100%;
+}
+
+
+/* Yolo */
+
+.boxyolo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.boxyolo .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/yolo-detail.png);
+}
+
+.boxyolo .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxyolo .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxyolo .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxyolo .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxyolo .info p span {
+    color: #9198a1;
+}
+
+.boxstarstruck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.boxstarstruck .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/starstruck-detail.png);
+}
+
+.boxstarstruck .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxstarstruck .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxstarstruck .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxstarstruck .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+/* boxsair */
+
+.boxsair,
+.boxsair2,
+.boxsair3,
+.boxsair4,
+.boxsair5,
+.boxsair6 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(145deg, #444c56, #2b313a);
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: all 0.25s ease;
+}
+
+.boxsair i,
+.boxsair2 i,
+.boxsair3 i,
+.boxsair4 i,
+.boxsair5 i,
+.boxsair6 i {
+    font-size: 1.0rem;
+    color: #f0f6fc;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.boxsair:hover,
+.boxsair2:hover,
+.boxsair3:hover,
+.boxsair4:hover,
+.boxsair5:hover,
+.boxsair6:hover {
+    background: linear-gradient(145deg, #535353, #333333);
+    box-shadow: 0 6px 16px rgb(14, 14, 14);
+    transform: scale(1.08);
+    color: #ffffff
+}
+
+@media screen and (max-width: 900px) {
+    .boxachievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxachievements>h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .achievements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .achievements>img {
+        width: 80px;
+    }
+
+    .achievements:hover>img {
+        width: 80px;
+    }
+
+    .inicio-container p {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .boxgalaxybrain .card {
+        width: 360px;
+    }
+
+    .boxgalaxybrain .info {
+        width: 360px;
+        height: 170px;
+    }
+
+    .boxgalaxybrain .info p {
+        font-size: 0.68rem;
+    }
+
+    .title::after {
+        width: 320px;
+    }
+
+    .boxpairextraordinaire .card {
+        width: 360px;
+    }
+
+    .boxpairextraordinaire .info {
+        width: 360px;
+        height: 170px;
+    }
+
+    .boxpairextraordinaire .info p {
+        font-size: 0.68rem;
+    }
+
+    .boxpullshark .card {
+        width: 360px;
+    }
+
+    .boxpullshark .info {
+        width: 360px;
+        height: 170px;
+    }
+
+    .boxpullshark .info p {
+        font-size: 0.68rem;
+    }
+
+    .boxquickdraw .card {
+        width: 360px;
+    }
+
+    .boxquickdraw .info {
+        width: 360px;
+        height: 180px;
+    }
+
+    .boxquickdraw .info {
+        margin-top: 0;
+        font-size: 0.68rem;
+    }
+
+    .boxquickdraw .info p,
+    .boxquickdraw .info a {
+        margin-top: 0;
+        font-size: 0.68rem;
+    }
+
+    .boxquickdraw .timeline2::after {
+        bottom: 10px;
+    }
+
+    .boxyolo .card {
+        width: 360px;
+    }
+
+    .boxyolo .info {
+        width: 360px;
+        height: 180px;
+    }
+
+    .boxyolo .info p {
+        margin-top: 0;
+        font-size: 0.68rem;
+    }
+
+    .boxstarstruck .card {
+        width: 360px;
+    }
+
+    .boxstarstruck .info {
+        width: 360px;
+        height: 180px;
+    }
+
+    .boxstarstruck .info p {
+        margin-top: 0px;
+        font-size: 0.68rem;
+    }
+}
