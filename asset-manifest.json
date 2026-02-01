@@ -1,8 +1,13 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.9aa40fba.css",
-    "main.js": "/Portfolio/static/js/main.7680b328.js",
+    "main.css": "/Portfolio/static/css/main.76549d4b.css",
+    "main.js": "/Portfolio/static/js/main.f2f5d060.js",
     "static/js/453.a7d99afe.chunk.js": "/Portfolio/static/js/453.a7d99afe.chunk.js",
+    "static/media/pull-shark-detail.png": "/Portfolio/static/media/pull-shark-detail.703e06b53eca62e9f719.png",
+    "static/media/galaxy-brain-detail.png": "/Portfolio/static/media/galaxy-brain-detail.bb5c2d1a1f8f67389df0.png",
+    "static/media/starstruck-detail.png": "/Portfolio/static/media/starstruck-detail.1af485d69efe07bba094.png",
+    "static/media/pair-extraordinaire-detail.png": "/Portfolio/static/media/pair-extraordinaire-detail.8307256da691efaed04e.png",
+    "static/media/quickdraw-detail.png": "/Portfolio/static/media/quickdraw-detail.6a8eafe05362328fbcf3.png",
     "static/media/galaxy-brain.png": "/Portfolio/static/media/galaxy-brain.7b6de71dc407b6f44bb0.png",
     "static/media/pull-shark.png": "/Portfolio/static/media/pull-shark.44fc2e9e56f635ec8ec9.png",
     "static/media/pair-extraordinaire.png": "/Portfolio/static/media/pair-extraordinaire.c02b732cdd779f92b2d8.png",
@@ -10,12 +15,12 @@
     "static/media/quickdraw.png": "/Portfolio/static/media/quickdraw.40775c53bf175394bad7.png",
     "static/media/yolo.png": "/Portfolio/static/media/yolo.28c64ec531eb0171bb6a.png",
     "index.html": "/Portfolio/index.html",
-    "main.9aa40fba.css.map": "/Portfolio/static/css/main.9aa40fba.css.map",
-    "main.7680b328.js.map": "/Portfolio/static/js/main.7680b328.js.map",
+    "main.76549d4b.css.map": "/Portfolio/static/css/main.76549d4b.css.map",
+    "main.f2f5d060.js.map": "/Portfolio/static/js/main.f2f5d060.js.map",
     "453.a7d99afe.chunk.js.map": "/Portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9aa40fba.css",
-    "static/js/main.7680b328.js"
+    "static/css/main.76549d4b.css",
+    "static/js/main.f2f5d060.js"
   ]
 }
