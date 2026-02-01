@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import soniclogo from "../img/sonic-finger.gif";
 
 
-export default function Header({ username = "guilhermeteixeira01", repo = "calisthenic-leveling" }) {
+export default function Header({ username = "guilhermeteixeira01", repo = "Portfolio" }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [stars, setStars] = useState(0);
