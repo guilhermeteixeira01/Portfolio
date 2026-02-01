@@ -7,7 +7,6 @@ section {
     padding: 60px 10%;
     gap: 60px;
     box-sizing: border-box;
-    z-index: 2;
 }
 
 .first-section .scroll-indicator {
@@ -16,6 +15,11 @@ section {
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    z-index: 2;
+}
+
+.second-section {
+    z-index: 2;
 }
 
 .skills {

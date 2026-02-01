@@ -14,9 +14,8 @@
     -webkit-backdrop-filter: blur(10px);
     width: 100vw;
     height: 100vh;
-    z-index: 102;
+    z-index: 100;
 }
-
 
 .title::after {
     background-color: #9198a1;
