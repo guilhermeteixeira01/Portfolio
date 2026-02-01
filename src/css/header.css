@@ -334,8 +334,11 @@ header {
     }
 
     .Title {
-        font-size: 22px;
-        margin-bottom: 8px;
+        display: none;
+    }
+
+    .SonicLogo {
+        display: none;
     }
 
     .btns {

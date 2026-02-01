@@ -1,6 +1,6 @@
 section {
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +16,14 @@ section {
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+}
+
+.skills {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
 }
 
 .scroll-indicator {
@@ -259,7 +267,7 @@ section {
     section {
         flex-direction: column;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 10px;
     }
 
     .My {
@@ -275,6 +283,10 @@ section {
 
     .first-section .scroll-indicator {
         bottom: -20px;
+    }
+
+    .skills {
+        top: -50px;
     }
 
     .My,
