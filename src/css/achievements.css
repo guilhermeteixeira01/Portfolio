@@ -657,7 +657,7 @@ a:hover {
     .boxquickdraw .info p,
     .boxyolo .info p,
     .boxstarstruck .info p {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
     }
 
     .title::after {
