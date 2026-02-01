@@ -45,7 +45,11 @@ header {
     bottom: -5px;
     width: 0%;
     height: 3px;
-    background: linear-gradient(90deg, #0a1f44, #1565c0, #42a5f5, #ffd54f);
+    background: linear-gradient(90deg,
+            #000000,
+            #ff0000,
+            #ffffff,
+            #ffd700);
     transition: width 0.5s ease;
 }
 
@@ -54,18 +58,18 @@ header {
 }
 
 .SonicLogo {
-    width: 60px;
-    filter: drop-shadow(0 0 8px #1e8fff88);
+    width: 80px;
+    filter: drop-shadow(0 0 8px #ff1e1e88);
     animation: sonicGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes sonicGlow {
     from {
-        filter: drop-shadow(0 0 6px #1e8fff88);
+        filter: drop-shadow(0 0 6px #ff1e1e88);
     }
 
     to {
-        filter: drop-shadow(0 0 10px #00bfff88);
+        filter: drop-shadow(0 0 10px #ff000088);
     }
 }
 
@@ -277,14 +281,12 @@ header {
     }
 
     .Title::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -5px;
         width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, #0a1f44, #1565c0, #42a5f5, #ffd54f);
-        transition: width 0.5s ease;
+        background: linear-gradient(90deg,
+                #000000,
+                #ff0000,
+                #ffffff,
+                #ffd700);
     }
 
     & .logodiv {
@@ -326,24 +328,18 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         height: auto;
         padding: 10px;
     }
 
     .Title {
-        font-size: 1.2rem;
+        font-size: 22px;
         margin-bottom: 8px;
     }
 
     .btns {
-        width: 100%;
+        width: 90%;
         justify-content: space-between;
-    }
-}
-
-@media (max-width: 480px) {
-    .Title {
-        font-size: 1rem;
     }
 }

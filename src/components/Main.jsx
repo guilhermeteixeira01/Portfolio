@@ -477,16 +477,14 @@ export default function Main() {
                     <img src="https://skillicons.dev/icons?i=html&theme=dark&size=32" alt="HTML" />
                     <img src="https://skillicons.dev/icons?i=css&theme=dark&size=32" alt="CSS" />
                     <img src="https://skillicons.dev/icons?i=js&theme=dark&size=32" alt="JavaScript" />
-                    <img src="https://skillicons.dev/icons?i=php&theme=dark&size=32" alt="PHP" />
+                    <img src="https://skillicons.dev/icons?i=react&theme=dark&size=32" alt="React" />
                     <img src="https://skillicons.dev/icons?i=git&theme=dark&size=32" alt="Git" />
                     <img src="https://skillicons.dev/icons?i=github&theme=dark&size=32" alt="GitHub" />
                     <img src="https://skillicons.dev/icons?i=cpp&theme=dark&size=32" alt="C++" />
                     <img src="https://skillicons.dev/icons?i=discord&theme=dark&size=32" alt="Discord" />
-                    <img src="https://skillicons.dev/icons?i=lua&theme=dark&size=32" alt="Lua" />
                     <img src="https://skillicons.dev/icons?i=vscode&theme=dark&size=32" alt="VSCode" />
                     <img src="https://skillicons.dev/icons?i=nodejs&theme=dark&size=32" alt="Node.js" />
                     <img src="https://skillicons.dev/icons?i=java&theme=dark&size=32" alt="Java" />
-                    <img src="https://skillicons.dev/icons?i=react&theme=dark&size=32" alt="React" />
                     <img src="https://skillicons.dev/icons?i=py&theme=dark&size=32" alt="Python" />
                     <img src="https://skillicons.dev/icons?i=mysql&theme=dark&size=32" alt="MySQL" />
                     <img src="https://skillicons.dev/icons?i=figma&theme=dark&size=32" alt="Figma" />

@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import './css/global.css';
 import { initStars } from "./components/stars";
+import StarCanvas from "./components/StarCanvas";
 
 import Header from './components/header';
 import Main from './components/Main'
@@ -33,7 +34,7 @@ function App() {
           pointerEvents: "none"
         }}
       />
-
+      <StarCanvas />
       {/* Conteúdo do site */}
       <Header />
       <Main />

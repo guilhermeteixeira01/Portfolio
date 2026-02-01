@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import soniclogo from "../img/sonic-finger.gif";
+import soniclogo from "../img/shadow.gif";
 
 
 export default function Header({ username = "guilhermeteixeira01", repo = "Portfolio" }) {
@@ -36,8 +36,8 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
     return (
         <header>
             <div className="logodiv">
-                <h1 className="Title">Guilherme Teixeira</h1>
                 <img src={soniclogo} className="SonicLogo" />
+                <h1 className="Title">Guilherme Teixeira</h1>
             </div>
 
             <div className="btns">
