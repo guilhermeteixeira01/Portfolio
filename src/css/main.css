@@ -9,7 +9,6 @@ section {
     box-sizing: border-box;
 }
 
-/* Indicador só na primeira section */
 .first-section .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -22,7 +21,6 @@ section {
     transition: opacity 0.25s ease;
 }
 
-/* Corpo do "mouse" */
 .mouse {
     width: 26px;
     height: 56px;
@@ -34,7 +32,6 @@ section {
     box-sizing: border-box;
 }
 
-/* Bolinha redonda */
 .wheel {
     width: 8px;
     height: 8px;
@@ -43,7 +40,6 @@ section {
     animation: scrollWheel 1.8s infinite ease-in-out;
 }
 
-/* Animação descendo com percurso maior */
 @keyframes scrollWheel {
     0% {
         opacity: 0;
@@ -66,65 +62,74 @@ section {
 }
 
 
-/* LADO ESQUERDO — TEXTO */
 .My {
     flex: 1;
-    max-width: 50%;
+    width: 100%;
+    text-align: left;
+    padding: 50px;
 }
 
 .My h3 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 400;
     color: #aaa;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .My h1 {
-    font-size: 60px;
+    font-size: 80px;
     margin: 0;
     background: linear-gradient(90deg, #1e90ff, #00bfff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 1.1;
 }
 
 .My h4 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 400;
     color: #ccc;
-    margin: 20px 0 30px 0;
+    margin: 25px 0 40px 0;
 }
 
 /* BOTÕES */
+
+.boxbuttons {
+    width: 70%;
+}
+
 .My .Resume {
-    width: 60%;
-    padding: 12px 22px;
-    margin-bottom: 12px;
+    width: 100%;
+    padding: 16px 28px;
+    margin-bottom: 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     background: linear-gradient(90deg, #1565c0, #1e88e5);
     color: white;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.5);
 }
 
 .My .Resume:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(30, 136, 229, 0.7);
 }
 
 .My .midiasocial {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
 .iconBtn {
-    width: 119px;
-    height: 48px;
+    width: 100%;
+    height: 50px;
     border-radius: 12px;
     border: none;
     display: flex;
@@ -133,29 +138,23 @@ section {
     cursor: pointer;
     background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
     color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
 
 .iconBtn:hover {
     transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6);
 }
 
 /* Cores no hover */
-.hireme:hover {
-    background: #0a66c2;
-}
-
-.github:hover {
-    background: #0a66c2;
-}
-
+.hireme:hover,
+.github:hover,
 .linkedin:hover {
     background: #0a66c2;
 }
 
-
-/* LADO DIREITO — IMAGEM */
 .box {
     flex: 1;
     max-width: 50%;
@@ -168,10 +167,14 @@ section {
 
 .box .Perfil {
     width: 100%;
-    max-width: 390px;
+    max-width: 300px;
     border-radius: 20px;
     animation: rainbowGlow 5s linear infinite;
     transition: transform 0.4s ease;
+}
+
+.box img:hover {
+    transform: scale(1.05) rotate(5deg);
 }
 
 @keyframes rainbowGlow {
@@ -182,11 +185,6 @@ section {
     100% {
         filter: drop-shadow(0 0 10px #00e5ff) drop-shadow(0 0 20px #00bcd4);
     }
-}
-
-
-.box img:hover {
-    transform: scale(1.05) rotate(1deg);
 }
 
 /* Achievements */
@@ -261,6 +259,17 @@ section {
         flex-direction: column;
         text-align: center;
         margin-top: 100px;
+    }
+
+    .My {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .boxbuttons {
+        width: 100%;
     }
 
     .first-section .scroll-indicator {

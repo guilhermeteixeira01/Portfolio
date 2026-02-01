@@ -2,6 +2,7 @@
 @import url(main.css);
 @import url(achievements.css);
 
+
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +11,14 @@
 
 body {
     min-height: 100vh;
-    background:
-        linear-gradient(120deg,
-            var(--galaxycolor1),
-            var(--galaxycolor2),
-            var(--galaxycolor3),
-            var(--galaxycolor4));
+    background: radial-gradient(ellipse at bottom right, var(--color-galaxy1), var(--color-galaxy2));
     overflow-x: hidden;
+}
+
+:root {
+    --colorprimary: snow;
+    --color-galaxy1: #1b2735 0%;
+    --color-galaxy2: #090a0f 100%;
 }
 
 ::-webkit-scrollbar {
@@ -44,19 +46,10 @@ body {
 
 #stars {
     position: fixed;
+    margin-top: 80px;
     inset: 0;
     z-index: -1;
 }
-
-:root {
-    --colorprimary: snow;
-    --star-color: snow;
-    --galaxycolor1: #05010d 0%;
-    --galaxycolor2: #0b0220 30%;
-    --galaxycolor3: #120437 60%;
-    --galaxycolor4: #02000a 100%;
-}
-
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

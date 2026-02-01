@@ -23,17 +23,11 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
 
     useEffect(() => {
         if (!isDarkMode) {
-            document.documentElement.style.setProperty('--galaxycolor1', '#1a1a1a 0%');
-            document.documentElement.style.setProperty('--galaxycolor2', '#666666 30%');
-            document.documentElement.style.setProperty('--galaxycolor3', '#b3b3b3 60%');
-            document.documentElement.style.setProperty('--galaxycolor4', '#1a1a1a 100%');
-            document.documentElement.style.setProperty('--star-color', 'snow');
+            document.documentElement.style.setProperty('--color-galaxy1', '#cfcfcf 0%');
+            document.documentElement.style.setProperty('--color-galaxy2', '#090a0f 100%');
         } else {
-            document.documentElement.style.setProperty('--galaxycolor1', '#05010d 0%');
-            document.documentElement.style.setProperty('--galaxycolor2', '#0b0220 30%');
-            document.documentElement.style.setProperty('--galaxycolor3', '#120437 60%');
-            document.documentElement.style.setProperty('--galaxycolor4', '#02000a 100%');
-            document.documentElement.style.setProperty('--star-color', 'snow');
+            document.documentElement.style.setProperty('--color-galaxy1', '#1b2735 0%');
+            document.documentElement.style.setProperty('--color-galaxy2', '#090a0f 100%');
         }
     }, [isDarkMode]);
 

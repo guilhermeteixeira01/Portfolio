@@ -144,6 +144,15 @@ header {
 }
 
 /* button githubstars */
+.Githubstar,
+.Githubstar .icon.github {
+    background: transparent;
+    outline: none;
+}
+
+.Githubstar:hover {
+    background: none;
+}
 
 .Githubstar {
     display: grid;
@@ -154,31 +163,27 @@ header {
     padding: 8px 8px;
     min-width: 100px;
 
-    color: var(--colorprimary);
     font-size: 15px;
     font-weight: 500;
+
+    color: var(--colorprimary);
 
     background: transparent;
     border: 1px solid var(--colorprimary);
     border-radius: 12px;
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
 .Githubstar:hover {
-    background: rgba(255, 255, 255, 0.178);
+    background: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .Githubstar .github svg {
     width: 22px;
     height: 22px;
-    color: var(--colorprimary);
 }
 
 .Githubstar .star {
@@ -225,9 +230,8 @@ header {
 }
 
 .MenuBtn:hover {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .MenuBtn .label {

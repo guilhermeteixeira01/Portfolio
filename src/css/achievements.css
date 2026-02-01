@@ -661,6 +661,7 @@ a:hover {
     }
 
     .title::after {
-        width: 85%;
+        width: 325px;
+        ;
     }
 }
