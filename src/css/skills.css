@@ -7,6 +7,10 @@
     width: 90%;
 }
 
+.skills h1 {
+    margin-bottom: 40px;
+}
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -44,9 +48,9 @@
 }
 
 /* Responsivo: ajusta ícones menores em telas pequenas */
-@media (max-width: 768px) {
-    .second-section h1 {
-        margin-top: 120px;
+@media (max-width: 900px) {
+    .skills {
+        top: -50px;
     }
 
     .skills-container {
