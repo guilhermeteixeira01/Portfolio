@@ -1,0 +1,40 @@
+@import url(header.css);
+@import url(main.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(120deg,
+            var(--galaxycolor1),
+            var(--galaxycolor2),
+            var(--galaxycolor3),
+            var(--galaxycolor4));
+    overflow-x: hidden;
+}
+
+#stars {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+:root {
+    --colorprimary: snow;
+    --star-color: 255, 255, 255;
+    --galaxycolor1: #05010d 0%;
+    --galaxycolor2: #0b0220 30%;
+    --galaxycolor3: #120437 60%;
+    --galaxycolor4: #02000a 100%;
+}
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}

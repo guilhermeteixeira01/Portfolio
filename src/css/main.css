@@ -1,0 +1,220 @@
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+    gap: 60px;
+    box-sizing: border-box;
+}
+
+/* LADO ESQUERDO — TEXTO */
+.My {
+    flex: 1;
+    max-width: 50%;
+}
+
+.My h3 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.My h1 {
+    font-size: 60px;
+    margin: 0;
+    background: linear-gradient(90deg, #1e90ff, #00bfff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.My h4 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ccc;
+    margin: 20px 0 30px 0;
+}
+
+/* BOTÕES */
+.My .Resume {
+    width: 60%;
+    padding: 12px 22px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #1565c0, #1e88e5);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+}
+
+.My .Resume:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.6);
+}
+
+.My .midiasocial {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconBtn {
+    width: 119px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.iconBtn:hover {
+    transform: translateY(-4px);
+}
+
+/* Cores no hover */
+.hireme:hover {
+    background: #0a66c2;
+}
+
+.github:hover {
+    background: #0a66c2;
+}
+
+.linkedin:hover {
+    background: #0a66c2;
+}
+
+
+/* LADO DIREITO — IMAGEM */
+.box {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.box .Perfil {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    animation: rainbowGlow 5s linear infinite;
+    transition: transform 0.4s ease;
+}
+
+@keyframes rainbowGlow {
+    0% {
+        filter: drop-shadow(0 0 8px #1e90ff) drop-shadow(0 0 16px #4fc3f7);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px #00e5ff) drop-shadow(0 0 20px #00bcd4);
+    }
+}
+
+
+.box img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* Achievements */
+
+.boxachievements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxachievements>h1 {
+    font-size: 2rem;
+    margin: 20px;
+    color: #00bfff;
+}
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.achievements img {
+    width: 80px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.achievements img:hover {
+    cursor: pointer;
+}
+
+/* 1 — Galaxy Brain (azul cósmico) */
+.achievements img:nth-child(1):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 8px #1e90ff) drop-shadow(0 0 16px #4fc3f7);
+}
+
+/* 2 — Pair Extraordinaire (dourado) */
+.achievements img:nth-child(2):hover {
+    transform: rotate(-6deg) scale(1.15);
+    filter: drop-shadow(0 0 10px #ffd700) drop-shadow(0 0 20px #ffb300);
+}
+
+/* 3 — Pull Shark (ciano / oceano) */
+.achievements img:nth-child(3):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 10px #00e5ff) drop-shadow(0 0 20px #00bcd4);
+}
+
+/* 4 — Quickdraw (roxo elétrico) */
+.achievements img:nth-child(4):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 10px #7c4dff) drop-shadow(0 0 22px #651fff);
+}
+
+/* 5 — YOLO (verde neon) */
+.achievements img:nth-child(5):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 10px #76ff03) drop-shadow(0 0 22px #00e676);
+}
+
+/* 6 — Starstruck (vermelho estrela) */
+.achievements img:nth-child(6):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 12px #ff5252) drop-shadow(0 0 24px #ff1744);
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .My,
+    .box {
+        max-width: 100%;
+    }
+
+    .My h1 {
+        font-size: 36px;
+    }
+
+    .box img {
+        max-width: 300px;
+    }
+}
