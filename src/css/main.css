@@ -9,6 +9,11 @@ section {
     box-sizing: border-box;
 }
 
+section h1 {
+    color: var(--colorprimary);
+    font-size: 80px;
+}
+
 .first-section .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -22,10 +27,6 @@ section {
     flex-direction: column;
 }
 
-.second-section h1 {
-    color: var(--colorprimary);
-    font-size: 80px;
-}
 
 .scroll-indicator {
     transition: opacity 0.25s ease;
@@ -246,7 +247,7 @@ section {
         margin-top: 10px;
     }
 
-    .second-section h1 {
+    section h1 {
         margin-top: 90px;
     }
 

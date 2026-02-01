@@ -34,10 +34,10 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
     return (
         <header>
             <div className="logodiv">
-                <h1 className="Title">Guilherme Teixeira</h1>
+                <h1 className="Title" data-aos="flip-left">Guilherme Teixeira</h1>
             </div>
 
-            <div className="btns">
+            <div className="btns" data-aos="flip-left">
                 <div className="switch">
                     <input
                         className="switchinput"
