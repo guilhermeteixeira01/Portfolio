@@ -17,55 +17,6 @@
     z-index: 102;
 }
 
-.link {
-    position: absolute;
-    bottom: 20px;
-}
-
-a {
-    color: #4493f8;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.unlock {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    fill: #9198a1;
-    width: 100%;
-}
-
-.unlock>p {
-    color: #9198a1;
-}
-
-.linkref {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    fill: #9198a1;
-    width: 100%;
-}
-
-.timeline2 {
-    fill: #9198a1;
-}
-
-.timeline2::after {
-    background-color: #9198a1;
-    bottom: 12px;
-    content: '';
-    display: block;
-    left: 7px;
-    position: absolute;
-    width: 2px;
-    height: 15%;
-}
 
 .title::after {
     background-color: #9198a1;
@@ -76,6 +27,122 @@ a:hover {
     height: 1px;
     bottom: -10px;
 }
+
+a {
+    color: #4493f8;
+}
+
+.link {
+    position: absolute;
+    bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.timeline2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 28px;
+}
+
+.timeline2::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    bottom: 18px;
+    width: 2px;
+    background: #30363d;
+}
+
+.unlock {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+    left: -27px;
+}
+
+.linkref {
+    left: -25px;
+    bottom: 7px;
+}
+
+
+.icon.trophy {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    fill: #8b949e;
+    background: #0d1117;
+    z-index: 1;
+}
+
+.icon.dot {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    border-radius: 50%;
+    background: #6e7681;
+    z-index: 1;
+
+    margin-top: 0;
+    align-self: center;
+}
+
+
+.timeline2 .unlock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.timeline2 .unlock svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background: #0d1117;
+    z-index: 1;
+}
+
+.timeline2 .linkref {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+}
+
+.timeline2 .linkref svg {
+    width: 8px;
+    height: 8px;
+    margin-top: 6px;
+    flex-shrink: 0;
+    fill: #6e7681;
+    background: #0d1117;
+    z-index: 1;
+}
+
+.timeline2 p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.unlock p {
+    font-size: 0.85rem;
+    color: #8b949e;
+}
+
+.linkref p {
+    font-size: 0.98rem;
+    color: #c9d1d9;
+}
+
+
 
 /* Galaxy Brain */
 
@@ -318,30 +385,6 @@ a:hover {
     color: #9198a1;
 }
 
-.boxquickdraw .timeline2 {
-    fill: #9198a1;
-}
-
-.boxquickdraw .timeline2::after {
-    background-color: #9198a1;
-    bottom: 20px;
-    content: '';
-    display: block;
-    left: 7px;
-    position: absolute;
-    width: 2px;
-    height: 24%;
-}
-
-.boxquickdraw .linkref {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    fill: #9198a1;
-    width: 100%;
-}
-
 
 /* Yolo */
 
@@ -512,6 +555,72 @@ a:hover {
 }
 
 @media screen and (max-width: 900px) {
+    .timeline2 {
+        gap: 10px;
+        padding-left: 22px;
+    }
+
+    .timeline2::before {
+        left: 6px;
+        top: 10px;
+        bottom: 14px;
+        width: 2px;
+    }
+
+    .timeline2 .unlock {
+        left: -23px;
+        gap: 8px;
+    }
+
+    .timeline2 .linkref {
+        left: -21px;
+    }
+
+    .timeline2 .unlock svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline2 .linkref svg {
+        width: 7px;
+        height: 7px;
+        margin-top: 5px;
+    }
+
+    .timeline2 p {
+        font-size: 0.85rem;
+        line-height: 1.45;
+        word-break: break-word;
+    }
+
+    .unlock p {
+        font-size: 0.8rem;
+    }
+
+    .linkref p {
+        font-size: 0.85rem;
+    }
+
+    /* ---------- SEÇÃO ACHIEVEMENTS ---------- */
+    .boxgalaxybrain .card,
+    .boxpairextraordinaire .card,
+    .boxpullshark .card,
+    .boxstarstruck .card,
+    .boxquickdraw .card,
+    .boxyolo .card {
+        width: 360px;
+    }
+
+    .boxgalaxybrain .info,
+    .boxpairextraordinaire .info,
+    .boxpullshark .info,
+    .boxstarstruck .info,
+    .boxquickdraw .info,
+    .boxyolo .info {
+        width: 360px;
+        height: 230px;
+    }
+
     .boxachievements {
         display: flex;
         flex-direction: column;
@@ -527,113 +636,31 @@ a:hover {
     .achievements {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
     }
 
     .achievements>img {
         width: 80px;
     }
 
-    .achievements:hover>img {
-        width: 80px;
-    }
-
+    /* ---------- TEXTO INÍCIO ---------- */
     .inicio-container p {
         font-size: 1.8rem;
         font-weight: 500;
     }
 
-    .boxgalaxybrain .card {
-        width: 360px;
-    }
+    /* ---------- TIPOGRAFIA DOS CARDS (SEM MUDAR TAMANHO) ---------- */
 
-    .boxgalaxybrain .info {
-        width: 360px;
-        height: 170px;
-    }
-
-    .boxgalaxybrain .info p {
-        font-size: 0.68rem;
+    .boxgalaxybrain .info p,
+    .boxpairextraordinaire .info p,
+    .boxpullshark .info p,
+    .boxquickdraw .info p,
+    .boxyolo .info p,
+    .boxstarstruck .info p {
+        font-size: 0.8rem;
     }
 
     .title::after {
-        width: 320px;
-    }
-
-    .boxpairextraordinaire .card {
-        width: 360px;
-    }
-
-    .boxpairextraordinaire .info {
-        width: 360px;
-        height: 170px;
-    }
-
-    .boxpairextraordinaire .info p {
-        font-size: 0.68rem;
-    }
-
-    .boxpullshark .card {
-        width: 360px;
-    }
-
-    .boxpullshark .info {
-        width: 360px;
-        height: 170px;
-    }
-
-    .boxpullshark .info p {
-        font-size: 0.68rem;
-    }
-
-    .boxquickdraw .card {
-        width: 360px;
-    }
-
-    .boxquickdraw .info {
-        width: 360px;
-        height: 180px;
-    }
-
-    .boxquickdraw .info {
-        margin-top: 0;
-        font-size: 0.68rem;
-    }
-
-    .boxquickdraw .info p,
-    .boxquickdraw .info a {
-        margin-top: 0;
-        font-size: 0.68rem;
-    }
-
-    .boxquickdraw .timeline2::after {
-        bottom: 10px;
-    }
-
-    .boxyolo .card {
-        width: 360px;
-    }
-
-    .boxyolo .info {
-        width: 360px;
-        height: 180px;
-    }
-
-    .boxyolo .info p {
-        margin-top: 0;
-        font-size: 0.68rem;
-    }
-
-    .boxstarstruck .card {
-        width: 360px;
-    }
-
-    .boxstarstruck .info {
-        width: 360px;
-        height: 180px;
-    }
-
-    .boxstarstruck .info p {
-        margin-top: 0px;
-        font-size: 0.68rem;
+        width: 85%;
     }
 }
