@@ -1,0 +1,64 @@
+.second-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-section h1 {
+    color: var(--colorprimary);
+    font-size: 80px;
+}
+
+/* Container da barra de skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 80px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0;
+    max-width: 70%;
+}
+
+/* Cada “tecla” */
+.skills-container img {
+    width: 120px;
+    height: 120px;
+    padding: 15px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    cursor: pointer;
+}
+
+/* Hover */
+.skills-container img:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(66, 173, 128, 0.5);
+    filter: brightness(1.2);
+}
+
+/* Click */
+.skills-container img:active {
+    transform: translateY(2px) scale(1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
+    filter: brightness(1);
+}
+
+/* Responsivo: ajusta ícones menores em telas pequenas */
+@media (max-width: 768px) {
+    .second-section h1 {
+        margin-top: 120px;
+    }
+
+    .skills-container {
+        gap: 15px;
+        padding: 10px 0;
+        max-width: 100%;
+    }
+
+    .skills-container img {
+        width: 70px;
+        height: 70px;
+    }
+}
