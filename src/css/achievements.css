@@ -719,3 +719,9 @@ a:hover {
         width: 325px;
     }
 }
+
+@media (max-height: 768px) {
+    .achievements>img {
+        width: 75px;
+    }
+}

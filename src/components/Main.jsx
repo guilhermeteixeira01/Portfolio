@@ -78,11 +78,11 @@ export default function Main() {
                                 data-aos-duration="1500" data-aos-delay="200" />
                             <img src={PullShark} onClick={() => setOpenCard(3)} data-aos="fade-up"
                                 data-aos-duration="1500" data-aos-delay="300" />
-                            <img src={QuickDraw} onClick={() => setOpenCard(4)} data-aos="fade-up"
+                            <img src={QuickDraw} onClick={() => setOpenCard(4)} data-aos="fade-down"
                                 data-aos-duration="1500" data-aos-delay="400" />
-                            <img src={Yolo} onClick={() => setOpenCard(5)} data-aos="fade-up"
+                            <img src={Yolo} onClick={() => setOpenCard(5)} data-aos="fade-down"
                                 data-aos-duration="1500" data-aos-delay="500" />
-                            <img src={StarStruck} onClick={() => setOpenCard(6)} data-aos="fade-up"
+                            <img src={StarStruck} onClick={() => setOpenCard(6)} data-aos="fade-down"
                                 data-aos-duration="1500" data-aos-delay="600" />
                         </div>
                     </div>
@@ -481,27 +481,27 @@ export default function Main() {
                 </div>
             </section >
 
-            {/*  <section id="skills" className="second-section">
+            <section id="skills" className="second-section">
                 <div className="skills">
-                    <h1 data-aos="fade-left" data-aos-duration="1500">Tech Stack</h1>
+                    <h1 data-aos="flip-up" data-aos-duration="1500">Tech Stack</h1>
                     <div className="skills-container">
-                        <img src="https://skillicons.dev/icons?i=html&theme=dark&size=32" alt="HTML" data-aos="fade-up-left" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=css&theme=dark&size=32" alt="CSS" data-aos="fade-up-right" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=js&theme=dark&size=32" alt="JavaScript" data-aos="fade-up-left" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=react&theme=dark&size=32" alt="React" data-aos="fade-up-right" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=git&theme=dark&size=32" alt="Git" data-aos="fade-up-left" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=github&theme=dark&size=32" alt="GitHub" data-aos="fade-up-right" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=cpp&theme=dark&size=32" alt="C++" data-aos="fade-up-left" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=discord&theme=dark&size=32" alt="Discord" data-aos="fade-up-right" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=vscode&theme=dark&size=32" alt="VSCode" data-aos="fade-up-left" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=nodejs&theme=dark&size=32" alt="Node.js" data-aos="fade-up-right" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=java&theme=dark&size=32" alt="Java" data-aos="fade-up-left" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=py&theme=dark&size=32" alt="Python" data-aos="fade-up-right" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=mysql&theme=dark&size=32" alt="MySQL" data-aos="fade-up-left" data-aos-duration="1500" />
-                        <img src="https://skillicons.dev/icons?i=figma&theme=dark&size=32" alt="Figma" data-aos="fade-up-right" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=html&theme=dark&size=32" alt="HTML" data-aos="fade-up" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=css&theme=dark&size=32" alt="CSS" data-aos="fade-down" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=js&theme=dark&size=32" alt="JavaScript" data-aos="fade-up" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=react&theme=dark&size=32" alt="React" data-aos="fade-down" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=git&theme=dark&size=32" alt="Git" data-aos="fade-up" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=github&theme=dark&size=32" alt="GitHub" data-aos="fade-down" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=cpp&theme=dark&size=32" alt="C++" data-aos="fade-up" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=discord&theme=dark&size=32" alt="Discord" data-aos="fade-down" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=vscode&theme=dark&size=32" alt="VSCode" data-aos="fade-up" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=nodejs&theme=dark&size=32" alt="Node.js" data-aos="fade-down" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=java&theme=dark&size=32" alt="Java" data-aos="fade-up" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=py&theme=dark&size=32" alt="Python" data-aos="fade-down" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=mysql&theme=dark&size=32" alt="MySQL" data-aos="fade-up" data-aos-duration="1500" />
+                        <img src="https://skillicons.dev/icons?i=figma&theme=dark&size=32" alt="Figma" data-aos="fade-down" data-aos-duration="1500" />
                     </div>
                 </div>
-            </section> */}
+            </section>
 
             {/* <section id="education" className="three-section">
                 <h1 data-aos="fade-left" data-aos-duration="1500">Education</h1>

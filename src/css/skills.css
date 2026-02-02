@@ -68,3 +68,16 @@
         height: 60px;
     }
 }
+
+@media (max-height: 768px) {
+    .skills-container {
+        gap: 30px;
+        padding: 10px 0;
+        max-width: 55%;
+    }
+
+    .skills-container img {
+        width: 100px;
+        height: 100px;
+    }
+}

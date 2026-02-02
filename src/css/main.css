@@ -1,6 +1,6 @@
 section {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +25,6 @@ section h1 {
     display: flex;
     flex-direction: column;
 }
-
 
 .scroll-indicator {
     transition: opacity 0.25s ease;
@@ -70,7 +69,6 @@ section h1 {
         transform: translateY(26px);
     }
 }
-
 
 .My {
     flex: 1;
@@ -238,6 +236,7 @@ section h1 {
     }
 }
 
+
 /* RESPONSIVO */
 @media (max-width: 900px) {
     section {
@@ -292,5 +291,58 @@ section h1 {
         margin-bottom: 10px;
         width: 80px;
         filter: drop-shadow(0 0 1px rgb(255, 255, 255)) drop-shadow(0 0 2px rgb(255, 255, 255));
+    }
+}
+
+@media (max-height: 768px) {
+    .first-section .scroll-indicator {
+        bottom: 80px;
+    }
+
+    .My {
+        flex: 1;
+        width: 100%;
+        text-align: left;
+        padding: 40px;
+    }
+
+    .My h1 {
+        font-size: 60px;
+        margin: 0;
+        background: linear-gradient(90deg, #1e90ff, #00bfff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.1;
+    }
+
+    .My h4 {
+        font-size: 22px;
+        font-weight: 400;
+        color: #ccc;
+        margin: 25px 0 40px 0;
+    }
+
+    .My .boxname {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .My .boxname h3 {
+        font-size: 40px;
+        font-weight: 400;
+        color: #aaa;
+        margin-bottom: 15px;
+        margin-top: auto;
+    }
+
+    .box .Perfil {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 20px;
+        animation: rainbowGlow 5s linear infinite;
+        transition: transform 0.4s ease;
     }
 }
