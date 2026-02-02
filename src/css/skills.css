@@ -17,7 +17,7 @@
     gap: 50px;
     justify-items: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
     max-width: 70%;
 }
 
@@ -64,7 +64,7 @@
     }
 
     .skills-container img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 }
