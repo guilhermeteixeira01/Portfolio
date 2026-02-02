@@ -74,13 +74,12 @@ export default function StarCanvas() {
                     alt="Sonic"
                     style={{
                         position: "absolute",
-                        left: s.x,
-                        top: s.y,
+                        transform: `translate(${s.x}px, ${s.y}px)`,
                         width: `${s.size}px`,
                         height: `${s.size}px`,
                         zIndex: -1,
                         pointerEvents: "none",
-                        transition: "transform 0.1s linear",
+                        willChange: "transform",
                     }}
                 />
             ))}

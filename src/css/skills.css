@@ -14,7 +14,7 @@
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 80px;
+    gap: 50px;
     justify-items: center;
     align-items: center;
     padding: 20px 0;
