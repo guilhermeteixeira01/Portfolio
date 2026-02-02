@@ -12,7 +12,7 @@ header {
     height: 80px;
     padding: 10px 20px;
     z-index: 100;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -267,7 +267,7 @@ header {
     top: 148%;
     width: 100vw;
     height: 100vh;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     background: radial-gradient(ellipse at bottom right, var(--color-galaxy1), var(--color-galaxy2));
     z-index: 100;
 
@@ -366,7 +366,7 @@ header {
 
 @media (max-width: 900px) {
     header {
-        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .Title {
@@ -385,7 +385,7 @@ header {
     .MenuBackdrop {
         top: 120%;
         width: 101vw;
-        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .MenuBackdrop.active {
