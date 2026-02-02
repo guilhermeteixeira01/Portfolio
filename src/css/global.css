@@ -40,6 +40,7 @@ body {
             #0A3D91);
     border-radius: 10px;
     border: 2px solid #0A3D91;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {

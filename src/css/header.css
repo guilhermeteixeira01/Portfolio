@@ -3,6 +3,7 @@
 header {
     position: fixed;
     top: -1px;
+    left: -1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,6 +12,7 @@ header {
     height: 80px;
     padding: 10px 20px;
     z-index: 100;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -142,9 +144,9 @@ header {
     display: grid;
     grid-template-columns: 24px 1fr 24px;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
 
-    padding: 8px 8px;
+    padding: 5px 5px;
     min-width: 100px;
 
     font-size: 15px;
@@ -253,6 +255,60 @@ header {
     pointer-events: auto;
 }
 
+
+/* Menu options */
+.MenuContainer {
+    position: relative;
+}
+
+.MenuBackdrop {
+    display: none;
+    position: fixed;
+    top: 148%;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: radial-gradient(ellipse at bottom right, var(--color-galaxy1), var(--color-galaxy2));
+    z-index: 100;
+
+    transition: right 0.2s ease;
+    pointer-events: none;
+}
+
+.MenuBackdrop.active {
+    display: block;
+    right: -8px;
+    pointer-events: auto;
+}
+
+.MenuOptions {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 146%;
+    right: -10px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 150px;
+    z-index: 100;
+}
+
+.MenuOptions li a {
+    font-size: 6rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.2s, transform 0.5s ease;
+}
+
+.MenuOptions li a:hover {
+    color: #ff0000;
+}
+
 /* responsividade */
 @media (max-width: 1024px) {
     header {
@@ -308,7 +364,11 @@ header {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    header {
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
     .Title {
         display: none;
     }
@@ -316,5 +376,30 @@ header {
     .btns {
         width: 90%;
         justify-content: space-between;
+    }
+
+    .MenuContainer button {
+        height: 39px;
+    }
+
+    .MenuBackdrop {
+        top: 120%;
+        width: 101vw;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .MenuBackdrop.active {
+        right: -36px;
+    }
+
+    .MenuOptions {
+        width: 101vw;
+        right: -30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MenuOptions li a {
+        font-size: 4rem;
     }
 }

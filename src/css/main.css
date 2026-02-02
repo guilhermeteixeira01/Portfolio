@@ -218,21 +218,26 @@ section h1 {
     width: 100%;
     max-width: 300px;
     border-radius: 20px;
-    animation: rainbowGlow 5s linear infinite;
+    animation: rainbowGlow 10s linear infinite;
     transition: transform 0.4s ease;
+    cursor: pointer;
 }
 
-.box img:hover {
+.box .Perfil:hover {
     transform: scale(1.05) rotate(5deg);
 }
 
 @keyframes rainbowGlow {
     0% {
-        filter: drop-shadow(0 0 8px #1e90ff) drop-shadow(0 0 16px #4fc3f7);
+        filter: drop-shadow(0 0 4px #00e5ff) drop-shadow(0 0 10px #00bcd4);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 15px #d40000);
     }
 
     100% {
-        filter: drop-shadow(0 0 10px #00e5ff) drop-shadow(0 0 20px #00bcd4);
+        filter: drop-shadow(0 0 4px #00e5ff) drop-shadow(0 0 10px #00bcd4);
     }
 }
 
