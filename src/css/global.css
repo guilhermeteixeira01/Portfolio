@@ -2,7 +2,7 @@
 @import url(main.css);
 @import url(achievements.css);
 @import url(skills.css);
-
+@import url(project.css);
 
 * {
     margin: 0;
@@ -15,9 +15,9 @@
 }
 
 body {
+    overflow-x: hidden;
     min-height: 100vh;
     background: radial-gradient(ellipse at bottom right, var(--color-galaxy1), var(--color-galaxy2));
-    overflow-x: hidden;
 }
 
 :root {

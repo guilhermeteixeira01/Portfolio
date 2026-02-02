@@ -21,7 +21,8 @@ section h1 {
     cursor: pointer;
 }
 
-.second-section {
+.second-section,
+.three-section {
     display: flex;
     flex-direction: column;
 }

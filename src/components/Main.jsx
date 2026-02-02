@@ -12,6 +12,48 @@ export default function Main() {
     const [openCard, setOpenCard] = useState(null);
     const [opacity, setOpacity] = useState(1);
 
+    const repos = [
+        { username: "guilhermeteixeira01", repo: "Portfolio" },
+        { username: "guilhermeteixeira01", repo: "calisthenic-leveling" },
+    ];
+
+    // Arrays para cada repo
+    const [stars, setStars] = useState([]);
+    const [forks, setForks] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        async function fetchAll() {
+            try {
+                setLoading(true);
+                setError(null);
+
+                const results = await Promise.all(
+                    repos.map(({ username, repo }) =>
+                        fetch(`https://api.github.com/repos/${username}/${repo}`)
+                            .then((res) => res.json())
+                            .then((data) => ({
+                                stars: data.stargazers_count ?? 0,
+                                forks: data.forks_count ?? 0,
+                            }))
+                            .catch(() => ({ stars: 0, forks: 0 }))
+                    )
+                );
+
+                // Separar stars e forks em arrays
+                setStars(results.map((r) => r.stars));
+                setForks(results.map((r) => r.forks));
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchAll();
+    }, [repos]);
+
     useEffect(() => {
         const handleScroll = () => {
             const section = document.getElementById("home");
@@ -503,9 +545,47 @@ export default function Main() {
                 </div>
             </section>
 
-            {/* <section id="education" className="three-section">
-                <h1 data-aos="fade-left" data-aos-duration="1500">Education</h1>
-            </section> */}
+            <section id="project" className="three-section">
+                <h1 data-aos="flip-up" data-aos-duration="1500">Project</h1>
+                <div className="divcards">
+                    <div className="card-project">
+                        <div className="title-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap h-6 w-6"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                            <div className="title-card2">
+                                <h1>{repos[1].repo}</h1>
+                                <p>React</p>
+                            </div>
+                        </div>
+                        <div className="desc-card">
+                            <p>Um projeto de aplicação web interativa que combina treino de calistenia (exercícios com o próprio peso) com um sistema de progressão gamificada.</p>
+                            <div className="boxlangs">
+                                <img src="https://skillicons.dev/icons?i=html&theme=dark&size=32" alt="HTML" />
+                                <img src="https://skillicons.dev/icons?i=css&theme=dark&size=32" alt="CSS" />
+                                <img src="https://skillicons.dev/icons?i=js&theme=dark&size=32" alt="JavaScript" />
+                                <img src="https://skillicons.dev/icons?i=react&theme=dark&size=32" alt="React" />
+                            </div>
+
+                            <div className="boxdesclangs">
+                                <span>React</span>
+                                <span>Html</span>
+                                <span>Css</span>
+                                <span>JavaScript</span>
+                                <span>FireBase</span>
+                            </div>
+                        </div>
+                        <div className="footergithub">
+                            <svg className="icon star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <span>{stars[1]}</span>
+                            <svg className="icon fork" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="6" r="3"></circle><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"></path><path d="M12 12v3"></path></svg><span>{forks[1]}</span>
+
+                            <div className="footer-right">
+                                <span className="code-link">Code </span>
+                                <svg className="icon-external" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
