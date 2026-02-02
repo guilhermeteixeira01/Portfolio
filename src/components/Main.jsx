@@ -481,7 +481,7 @@ export default function Main() {
                 </div>
             </section >
 
-            <section id="skills" className="second-section">
+            {/*  <section id="skills" className="second-section">
                 <div className="skills">
                     <h1 data-aos="fade-left" data-aos-duration="1500">Tech Stack</h1>
                     <div className="skills-container">
@@ -501,7 +501,7 @@ export default function Main() {
                         <img src="https://skillicons.dev/icons?i=figma&theme=dark&size=32" alt="Figma" data-aos="fade-up-right" data-aos-duration="1500" />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* <section id="education" className="three-section">
                 <h1 data-aos="fade-left" data-aos-duration="1500">Education</h1>
