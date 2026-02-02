@@ -294,7 +294,7 @@ section h1 {
     }
 }
 
-@media (max-height: 768px) {
+@media (orientation: landscape) and (max-height: 768px) {
     .first-section .scroll-indicator {
         bottom: 80px;
     }

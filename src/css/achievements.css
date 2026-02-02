@@ -720,7 +720,7 @@ a:hover {
     }
 }
 
-@media (max-height: 768px) {
+@media (orientation: landscape) and (max-height: 768px) {
     .achievements>img {
         width: 75px;
     }

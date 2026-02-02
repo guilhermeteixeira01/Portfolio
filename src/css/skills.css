@@ -69,7 +69,7 @@
     }
 }
 
-@media (max-height: 768px) {
+@media (orientation: landscape) and (max-height: 768px) {
     .skills-container {
         gap: 30px;
         padding: 10px 0;
