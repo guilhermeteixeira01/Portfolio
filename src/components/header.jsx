@@ -132,7 +132,7 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                         <ul className="MenuOptions">
                             <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
                             <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
-                            <li><a href="#" onClick={() => setMenuOpen(false)}>...</a></li>
+                            <li><a href="#project" onClick={() => setMenuOpen(false)}>Projects</a></li>
                             <li><a href="#" onClick={() => setMenuOpen(false)}>...</a></li>
                         </ul>
                     )}
