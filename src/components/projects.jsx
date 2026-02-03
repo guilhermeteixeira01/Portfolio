@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+console.log("TOKEN:", process.env.REACT_APP_GITHUB_TOKEN);
 
 export default function Projects() {
     const repos = [
@@ -15,6 +16,10 @@ export default function Projects() {
     const [error, setError] = useState(null);
     const hasFetched = useRef(false);
 
+    const headers = {
+        Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+    };
+
     useEffect(() => {
         if (hasFetched.current) return;
         hasFetched.current = true;
@@ -27,18 +32,29 @@ export default function Projects() {
                 const results = await Promise.all(
                     repos.map(async ({ username, repo }) => {
                         try {
-                            const repoRes = await fetch(`https://api.github.com/repos/${username}/${repo}`);
-                            const repoData = repoRes.ok ? await repoRes.json() : null;
+                            const repoRes = await fetch(
+                                `https://api.github.com/repos/${username}/${repo}`,
+                                { headers }
+                            );
 
-                            const langRes = await fetch(`https://api.github.com/repos/${username}/${repo}/languages`);
+                            if (!repoRes.ok) throw new Error("Erro ao buscar repo");
+
+                            const repoData = await repoRes.json();
+
+                            const langRes = await fetch(
+                                `https://api.github.com/repos/${username}/${repo}/languages`,
+                                { headers }
+                            );
+
                             const langData = langRes.ok ? await langRes.json() : {};
 
                             return {
-                                stars: repoData?.stargazers_count ?? 0,
-                                forks: repoData?.forks_count ?? 0,
+                                stars: repoData.stargazers_count ?? 0,
+                                forks: repoData.forks_count ?? 0,
                                 languages: Object.keys(langData),
                             };
-                        } catch {
+                        } catch (err) {
+                            console.error(err);
                             return { stars: 0, forks: 0, languages: [] };
                         }
                     })
@@ -56,7 +72,6 @@ export default function Projects() {
 
         fetchAll();
     }, []);
-
 
     return (
         <section id="project" className="three-section">

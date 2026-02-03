@@ -6,8 +6,17 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
     const [stars, setStars] = useState(0);
 
     useEffect(() => {
-        fetch(`https://api.github.com/repos/${username}/${repo}`)
-            .then((response) => response.json())
+        const headers = {
+            Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+        };
+
+        fetch(`https://api.github.com/repos/${username}/${repo}`, { headers })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Erro na resposta: ${response.status}`);
+                }
+                return response.json();
+            })
             .then((data) => {
                 if (data.stargazers_count !== undefined) {
                     setStars(data.stargazers_count);
@@ -17,7 +26,6 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                 console.error("Erro ao buscar estrelas do GitHub:", err);
             });
     }, [username, repo]);
-
 
     useEffect(() => {
         if (!isDarkMode) {
@@ -142,7 +150,7 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                     </div>
                 </div>
             </header>
-            <iframe data-testid="embed-iframe" className="BoxSpotify" src="https://open.spotify.com/embed/playlist/7fMmNMr76FUtDe4HSAnN4m?utm_source=generator&theme=0" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" className="BoxSpotify" src="https://open.spotify.com/embed/playlist/7fMmNMr76FUtDe4HSAnN4m?utm_source=generator" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </>
     );
 }
