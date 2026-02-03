@@ -8,11 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
         run: npm install
+      - name: Set Env Variable for React Build
+        run: echo "REACT_APP_GITHUB_TOKEN=${{ secrets.REACT_APP_GITHUB_TOKEN }}" >> $GITHUB_ENV
       - name: Build
         run: CI=false npm run build
