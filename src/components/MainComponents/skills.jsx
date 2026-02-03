@@ -1,4 +1,4 @@
-import PawnIcon from '../img/Pawn.png';
+import PawnIcon from '../../img/icons/Pawn.png';
 
 export default function skills() {
     return (

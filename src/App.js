@@ -5,7 +5,7 @@ import { initStars } from "./components/stars";
 import StarCanvas from "./components/StarCanvas";
 
 import Header from './components/header';
-import Main from './components/Main'
+import Main from './components/Main';
 
 console.log('%c⚡💥 Bem-vindo, desenvolvedor curioso! 💥⚡', 'color: purple; font-size: 15px; font-family: monospace; font-weight: bold;');
 console.log('%c⚡ Creditos: Guilherme Teixeira ⚡', 'background: linear-gradient(to right, red, black); color: white; font-size: 15px; font-weight: bold; padding: 4px;');

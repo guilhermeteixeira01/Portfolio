@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import GalaxyBrain from "../img/Achievements Github/galaxy-brain.png";
-import PairExtraordinaire from "../img/Achievements Github/pair-extraordinaire.png"
-import PullShark from "../img/Achievements Github/pull-shark.png"
-import QuickDraw from "../img/Achievements Github/quickdraw.png"
-import Yolo from "../img/Achievements Github/yolo.png"
-import StarStruck from "../img/Achievements Github/StarStruck.png"
-import shadow from "../img/shadow.gif";
+import GalaxyBrain from "../../img/Achievements Github/galaxy-brain.png";
+import PairExtraordinaire from "../../img/Achievements Github/pair-extraordinaire.png"
+import PullShark from "../../img/Achievements Github/pull-shark.png"
+import QuickDraw from "../../img/Achievements Github/quickdraw.png"
+import Yolo from "../../img/Achievements Github/yolo.png"
+import StarStruck from "../../img/Achievements Github/StarStruck.png"
+import shadow from "../../img/shadow.gif";
 
 export default function Home() {
     const [openCard, setOpenCard] = useState(null);
@@ -40,10 +40,10 @@ export default function Home() {
             <div className="My">
                 <div className="boxname">
                     <img src={shadow} alt="Shadow" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" />
-                    <h3 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Hi, I am</h3>
+                    <h3 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Olá, Eu sou</h3>
                 </div>
                 <h1 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="550">Guilherme Teixeira</h1>
-                <h4 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">A Full Stack Web Developer</h4>
+                <h4 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">Full Stack Web Developer</h4>
 
                 <div className="boxbuttons">
                     <button className="Resume" onClick={() => window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank")} data-aos="flip-up" data-aos-duration="1500" data-aos-delay="800">Resume</button>
@@ -62,6 +62,12 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
+
+                <picture>
+                    <source media="(prefers-color-scheme: dark)" srcSet="https://raw.githubusercontent.com/guilhermeteixeira01/guilhermeteixeira01/output/pacman-contribution-graph-dark.svg" />
+                    <source media="(prefers-color-scheme: light)" srcSet="https://raw.githubusercontent.com/guilhermeteixeira01/guilhermeteixeira01/output/pacman-contribution-graph.svg" />
+                    <img className="contribution-graph" alt="pacman contribution graph" src="https://raw.githubusercontent.com/guilhermeteixeira01/guilhermeteixeira01/output/pacman-contribution-graph.svg" />
+                </picture>
             </div>
 
             <div className="box">
@@ -84,6 +90,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
 
             {openCard === 1 && (
                 <div className="background" id="card1">

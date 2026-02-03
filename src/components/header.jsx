@@ -144,14 +144,6 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                     </div>
                 </div>
             </header>
-            <iframe
-                title="Spotify Playlist 7fMmNMr76FUtDe4HSAnN4m"
-                className="BoxSpotify"
-                src="https://open.spotify.com/embed/playlist/7fMmNMr76FUtDe4HSAnN4m?utm_source=generator"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-            />
         </>
     );
 }
