@@ -1,37 +1,34 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default function Projects() {
-    const repos = [
+    const repos = useMemo(() => [
         { username: "guilhermeteixeira01", repo: "calisthenic-leveling" },
         { username: "guilhermeteixeira01", repo: "ChatManager-MC" },
         { username: "guilhermeteixeira01", repo: "Amxx-zp" },
-    ];
+    ], []);
 
     const [stars, setStars] = useState([]);
     const [forks, setForks] = useState([]);
     const [languages, setLanguages] = useState([]);
 
     useEffect(() => {
-        const headers = {
-            Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
-        };
-
         let isMounted = true;
 
         async function fetchAll() {
             const results = await Promise.all(
                 repos.map(async ({ username, repo }) => {
                     try {
+                        // Request do repositório (público)
                         const repoRes = await fetch(
-                            `https://api.github.com/repos/${username}/${repo}`,
-                            { headers }
+                            `https://api.github.com/repos/${username}/${repo}`
                         );
                         if (!repoRes.ok) throw new Error("Erro ao buscar repo");
+
                         const repoData = await repoRes.json();
 
+                        // Request das linguagens
                         const langRes = await fetch(
-                            `https://api.github.com/repos/${username}/${repo}/languages`,
-                            { headers }
+                            `https://api.github.com/repos/${username}/${repo}/languages`
                         );
                         const langData = langRes.ok ? await langRes.json() : {};
 
@@ -48,9 +45,9 @@ export default function Projects() {
             );
 
             if (isMounted) {
-                setStars(results.map((r) => r.stars));
-                setForks(results.map((r) => r.forks));
-                setLanguages(results.map((r) => r.languages));
+                setStars(results.map(r => r.stars));
+                setForks(results.map(r => r.forks));
+                setLanguages(results.map(r => r.languages));
             }
         }
 

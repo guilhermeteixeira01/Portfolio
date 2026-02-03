@@ -6,25 +6,19 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
     const [stars, setStars] = useState(0);
 
     useEffect(() => {
-        const headers = {
-            Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
-        };
+        async function fetchStars() {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${username}/${repo}`);
+                if (!response.ok) throw new Error(`Erro na resposta: ${response.status}`);
 
-        fetch(`https://api.github.com/repos/${username}/${repo}`, { headers })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`Erro na resposta: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then((data) => {
-                if (data.stargazers_count !== undefined) {
-                    setStars(data.stargazers_count);
-                }
-            })
-            .catch((err) => {
+                const data = await response.json();
+                setStars(data.stargazers_count ?? 0);
+            } catch (err) {
                 console.error("Erro ao buscar estrelas do GitHub:", err);
-            });
+            }
+        }
+
+        fetchStars();
     }, [username, repo]);
 
     useEffect(() => {
@@ -144,13 +138,20 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                                 <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
                                 <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
                                 <li><a href="#project" onClick={() => setMenuOpen(false)}>Projects</a></li>
-                                <li><a href="#" onClick={() => setMenuOpen(false)}>...</a></li>
+                                <li><a href="#home" onClick={() => setMenuOpen(false)}>...</a></li>
                             </ul>
                         )}
                     </div>
                 </div>
             </header>
-            <iframe title="Spotify" data-testid="embed-iframe" className="BoxSpotify" src="https://open.spotify.com/embed/playlist/7fMmNMr76FUtDe4HSAnN4m?utm_source=generator" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe
+                title="Spotify Playlist 7fMmNMr76FUtDe4HSAnN4m"
+                className="BoxSpotify"
+                src="https://open.spotify.com/embed/playlist/7fMmNMr76FUtDe4HSAnN4m?utm_source=generator"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+            />
         </>
     );
 }
