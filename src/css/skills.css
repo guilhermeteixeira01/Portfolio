@@ -41,14 +41,15 @@
 /* Responsivo: ajusta ícones menores em telas pequenas */
 @media (max-width: 900px) {
     .skills-container {
-        gap: 15px;
-        padding: 10px 0;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
         max-width: 100%;
     }
 
     .skills-container img {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 }
 
