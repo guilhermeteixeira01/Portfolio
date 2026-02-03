@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-console.log("TOKEN:", process.env.REACT_APP_GITHUB_TOKEN);
 
 export default function Projects() {
     const repos = [
