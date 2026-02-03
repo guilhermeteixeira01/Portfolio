@@ -16,11 +16,11 @@ export default function Projects() {
     const [error, setError] = useState(null);
     const hasFetched = useRef(false);
 
-    const headers = {
-        Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
-    };
-
     useEffect(() => {
+        const headers = {
+            Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+        };
+
         if (hasFetched.current) return;
         hasFetched.current = true;
 
