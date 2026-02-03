@@ -17,7 +17,7 @@ jobs:
 
       - name: Set Env Variable for React build
         run: echo "REACT_APP_GITHUB_TOKEN=${{ secrets.REACT_APP_GITHUB_TOKEN }}" >> $GITHUB_ENV
-
+      # TESTE TOKEN BUILD
       - name: Debug Token
         run: echo "TOKEN NO BUILD = $REACT_APP_GITHUB_TOKEN"
 
