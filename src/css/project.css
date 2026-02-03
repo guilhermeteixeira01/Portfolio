@@ -47,6 +47,11 @@
 }
 
 .title-card2 {
+    position: absolute;
+    width: 60%;
+    top: 2px;
+    left: 50px;
+
     & h1 {
         font-size: 15px;
         font-weight: bolder;
@@ -63,44 +68,48 @@
     position: absolute;
     width: 90%;
     top: 50px;
+    left: -4px;
     display: flex;
     flex-direction: column;
     margin: 20px;
     color: #fff;
+}
 
-    & .boxlangs {
-        width: 100%;
-        margin: 20px 5px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 8px;
-    }
+.boxlangs {
+    position: absolute;
+    width: 90%;
+    top: 70px;
+    margin: 20px 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
 
-    & .boxlangs img {
-        width: 40px;
-        padding: 10px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
-        border-radius: 8px;
-    }
+.boxlangs img {
+    width: 30px;
+    padding: 5px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    border-radius: 8px;
+}
 
-    & .boxlangs img:nth-child(odd) {
-        box-shadow: 0 2px 4px #c01515, inset 0 -2px 5px rgba(255, 255, 255, 0.2);
-    }
+.boxlangs img:nth-child(odd) {
+    box-shadow: 0 2px 4px #c01515, inset 0 -2px 5px rgba(255, 255, 255, 0.2);
+}
 
-    & .boxlangs img:nth-child(2),
-    .boxlangs img:nth-child(4),
-    .boxlangs img:nth-child(6),
-    .boxlangs img:nth-child(8) {
-        box-shadow: 0 2px 4px #1e88e5, inset 0 -2px 5px rgba(255, 255, 255, 0.2);
-    }
+.boxlangs img:nth-child(2),
+.boxlangs img:nth-child(4),
+.boxlangs img:nth-child(6),
+.boxlangs img:nth-child(8) {
+    box-shadow: 0 2px 4px #1e88e5, inset 0 -2px 5px rgba(255, 255, 255, 0.2);
+}
 
-    & .boxdesclangs {
-        margin-top: 15px;
-        width: 107%;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 5px;
-    }
+.boxdesclangs {
+    position: absolute;
+    width: 100%;
+    top: 180px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
 
     & span {
         display: flex;
@@ -110,7 +119,7 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
         font-size: 12px;
-    }
+    }   
 }
 
 .boximg {
