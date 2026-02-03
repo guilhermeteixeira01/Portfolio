@@ -172,6 +172,70 @@
     cursor: pointer;
 }
 
+.repo-error-card {
+    grid-column: 1 / -1;
+    /* ocupa todas as colunas do grid */
+    background: linear-gradient(145deg, #1f1f1f, #141414);
+    border: 2px solid #ff3b3b;
+    border-radius: 16px;
+    padding: 40px 50px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
+    animation: pulseGlow 2s infinite ease-in-out;
+    justify-self: center;
+    /* centraliza horizontal */
+}
+
+.repo-error-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    animation: shake 1.5s infinite;
+}
+
+.repo-error-card h2 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.repo-error-card p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(255, 0, 0, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
+
 @media (max-width: 1300px) {
     .divcards {
         grid-template-columns: repeat(2, 1fr);
@@ -210,5 +274,9 @@
 
     .desc-card {
         font-size: 13px;
+    }
+
+    .repo-error-card {
+        max-width: 350px;
     }
 }
