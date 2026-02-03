@@ -309,6 +309,14 @@ header {
     color: #ff0000;
 }
 
+.BoxSpotify {
+    position: fixed;
+    width: 350px;
+    top: 90px;
+    right: 20px;
+    z-index: 3;
+}
+
 /* responsividade */
 @media (max-width: 1024px) {
     header {
@@ -361,6 +369,10 @@ header {
     .switchinput:checked+.switchlabel:after {
         left: 58px;
         transform: translateX(-100%);
+    }
+
+    .BoxSpotify {
+        display: none;
     }
 }
 
