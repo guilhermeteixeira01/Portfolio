@@ -1,5 +1,3 @@
-import SonicGold from "../img/super-sonic.gif";
-
 export function initStars(canvas) {
     const ctx = canvas.getContext("2d");
 
@@ -52,7 +50,6 @@ export function initStars(canvas) {
 
     animate();
 
-    // função de limpeza (IMPORTANTE no React)
     return () => {
         cancelAnimationFrame(animationId);
         window.removeEventListener("resize", resize);

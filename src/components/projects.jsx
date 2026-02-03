@@ -8,70 +8,59 @@ export default function Projects() {
         { username: "guilhermeteixeira01", repo: "Amxx-zp" },
     ];
 
-    // Arrays para cada repo
     const [stars, setStars] = useState([]);
     const [forks, setForks] = useState([]);
     const [languages, setLanguages] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const hasFetched = useRef(false);
 
     useEffect(() => {
         const headers = {
             Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
         };
 
-        if (hasFetched.current) return;
-        hasFetched.current = true;
+        let isMounted = true; 
 
         async function fetchAll() {
-            try {
-                setLoading(true);
-                setError(null);
+            const results = await Promise.all(
+                repos.map(async ({ username, repo }) => {
+                    try {
+                        const repoRes = await fetch(
+                            `https://api.github.com/repos/${username}/${repo}`,
+                            { headers }
+                        );
+                        if (!repoRes.ok) throw new Error("Erro ao buscar repo");
+                        const repoData = await repoRes.json();
 
-                const results = await Promise.all(
-                    repos.map(async ({ username, repo }) => {
-                        try {
-                            const repoRes = await fetch(
-                                `https://api.github.com/repos/${username}/${repo}`,
-                                { headers }
-                            );
+                        const langRes = await fetch(
+                            `https://api.github.com/repos/${username}/${repo}/languages`,
+                            { headers }
+                        );
+                        const langData = langRes.ok ? await langRes.json() : {};
 
-                            if (!repoRes.ok) throw new Error("Erro ao buscar repo");
+                        return {
+                            stars: repoData.stargazers_count ?? 0,
+                            forks: repoData.forks_count ?? 0,
+                            languages: Object.keys(langData),
+                        };
+                    } catch (err) {
+                        console.error(err);
+                        return { stars: 0, forks: 0, languages: [] };
+                    }
+                })
+            );
 
-                            const repoData = await repoRes.json();
-
-                            const langRes = await fetch(
-                                `https://api.github.com/repos/${username}/${repo}/languages`,
-                                { headers }
-                            );
-
-                            const langData = langRes.ok ? await langRes.json() : {};
-
-                            return {
-                                stars: repoData.stargazers_count ?? 0,
-                                forks: repoData.forks_count ?? 0,
-                                languages: Object.keys(langData),
-                            };
-                        } catch (err) {
-                            console.error(err);
-                            return { stars: 0, forks: 0, languages: [] };
-                        }
-                    })
-                );
-
+            if (isMounted) {
                 setStars(results.map((r) => r.stars));
                 setForks(results.map((r) => r.forks));
                 setLanguages(results.map((r) => r.languages));
-            } catch {
-                setError("Falha ao buscar dados");
-            } finally {
-                setLoading(false);
             }
         }
 
         fetchAll();
-    }, []);
+
+        return () => {
+            isMounted = false;
+        };
+    }, [repos]);
 
     return (
         <section id="project" className="three-section">

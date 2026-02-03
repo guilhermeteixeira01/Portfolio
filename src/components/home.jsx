@@ -65,22 +65,22 @@ export default function Home() {
             </div>
 
             <div className="box">
-                <img src="https://avatars.githubusercontent.com/u/220722197?v=4" className="Perfil" data-aos="zoom-out" data-aos-duration="1500" />
+                <img src="https://avatars.githubusercontent.com/u/220722197?v=4" className="Perfil" data-aos="zoom-out" data-aos-duration="1500" alt="Perfil" />
                 <div className="boxachievements">
                     <h1>Insígnias do Github</h1>
                     <div className="achievements">
                         <img src={GalaxyBrain} onClick={() => setOpenCard(1)} data-aos="fade-up"
-                            data-aos-duration="1500" data-aos-delay="100" />
+                            data-aos-duration="1500" data-aos-delay="100" alt="Galaxy Brain" />
                         <img src={PairExtraordinaire} onClick={() => setOpenCard(2)} data-aos="fade-up"
-                            data-aos-duration="1500" data-aos-delay="200" />
+                            data-aos-duration="1500" data-aos-delay="200" alt="Pair Extraordinaire" />
                         <img src={PullShark} onClick={() => setOpenCard(3)} data-aos="fade-up"
-                            data-aos-duration="1500" data-aos-delay="300" />
+                            data-aos-duration="1500" data-aos-delay="300" alt="Pull Shark" />
                         <img src={QuickDraw} onClick={() => setOpenCard(4)} data-aos="fade-down"
-                            data-aos-duration="1500" data-aos-delay="400" />
+                            data-aos-duration="1500" data-aos-delay="400" alt="Quick Draw" />
                         <img src={Yolo} onClick={() => setOpenCard(5)} data-aos="fade-down"
-                            data-aos-duration="1500" data-aos-delay="500" />
+                            data-aos-duration="1500" data-aos-delay="500" alt="Yolo" />
                         <img src={StarStruck} onClick={() => setOpenCard(6)} data-aos="fade-down"
-                            data-aos-duration="1500" data-aos-delay="600" />
+                            data-aos-duration="1500" data-aos-delay="600" alt="Star Struck" />
                     </div>
                 </div>
             </div>
@@ -137,7 +137,6 @@ export default function Home() {
                                             <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
                                         </svg>
                                         <p>
-                                            <a href="#" target="_blank" rel="noreferrer"></a>
                                             inaccessible · 2nd accepted answer
                                         </p>
                                     </div>
@@ -201,7 +200,7 @@ export default function Home() {
                                         </svg>
                                         <p>
                                             <a href="https://github.com/guilhermeteixeira01/minebrothers-web/pull/5"
-                                                target="_blank">minebrothers-web#5</a> <span>·Coauthored with </span><span style={{ color: "snow" }}>@CaduTM</span>
+                                                target="_blank" rel="noreferrer">minebrothers-web#5</a> <span>·Coauthored with </span><span style={{ color: "snow" }}>@CaduTM</span>
                                         </p>
                                     </div>
                                 </div>
@@ -264,7 +263,7 @@ export default function Home() {
                                         </svg>
                                         <p>
                                             <p><a href="https://github.com/guilhermeteixeira01/minebrothers-web/pull/2"
-                                                target="_blank">minebrothers-web#2</a> · 2nd pull request merged
+                                                target="_blank" rel="noreferrer">minebrothers-web#2</a> · 2nd pull request merged
                                             </p>
                                         </p>
                                     </div>
@@ -328,7 +327,7 @@ export default function Home() {
                                         </svg>
                                         <p>
                                             <p><a href="https://github.com/guilhermeteixeira01/minebrothers-web/pull/3"
-                                                target="_blank">minebrothers-web#3</a>· Closed within 5 minutes of opening
+                                                target="_blank" rel="noreferrer">minebrothers-web#3</a>· Closed within 5 minutes of opening
                                             </p>
                                         </p>
                                     </div>
@@ -392,7 +391,7 @@ export default function Home() {
                                         </svg>
                                         <p>
                                             <p><a href="https://github.com/guilhermeteixeira01/minebrothers-web/pull/1"
-                                                target="_blank">minebrothers-web#1</a> · Merged without a review
+                                                target="_blank" rel="noreferrer">minebrothers-web#1</a> · Merged without a review
                                             </p>
                                         </p>
                                     </div>
@@ -456,7 +455,7 @@ export default function Home() {
                                         </svg>
                                         <p>
                                             <p><a href="https://github.com/guilhermeteixeira01/calisthenic-leveling"
-                                                target="_blank">calisthenic-leveling</a>
+                                                target="_blank" rel="noreferrer">calisthenic-leveling</a>
                                                 · ⭐️ 16 stars</p>
                                         </p>
                                     </div>
