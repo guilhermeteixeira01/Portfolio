@@ -3,16 +3,23 @@ name: Build React App
 on:
   push:
     branches:
-      - main  # roda quando fizer push na branch main
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
+
       - name: Install Dependencies
         run: npm install
-      - name: Set Env Variable for React Build
+
+      - name: Set Env Variable for React build
         run: echo "REACT_APP_GITHUB_TOKEN=${{ secrets.REACT_APP_GITHUB_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Debug Token
+        run: echo "TOKEN NO BUILD = $REACT_APP_GITHUB_TOKEN"
+
       - name: Build
         run: CI=false npm run build
