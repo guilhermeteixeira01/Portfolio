@@ -19,7 +19,8 @@
 
 .card-project {
     position: relative;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
     width: 320px;
     height: 470px;
     border-radius: 20px;
@@ -41,7 +42,7 @@
         padding: 5px;
         color: #fff;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
         border-radius: 5px;
     }
 }

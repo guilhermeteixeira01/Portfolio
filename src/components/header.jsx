@@ -23,9 +23,11 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
         if (!isDarkMode) {
             document.documentElement.style.setProperty('--color-galaxy1', '#cfcfcf 0%');
             document.documentElement.style.setProperty('--color-galaxy2', '#090a0f 100%');
+            document.documentElement.style.setProperty('--gradient1-boxproject', 'rgba(0, 0, 0, 0.7)');
         } else {
             document.documentElement.style.setProperty('--color-galaxy1', '#1b2735 0%');
             document.documentElement.style.setProperty('--color-galaxy2', '#090a0f 100%');
+            document.documentElement.style.setProperty('--gradient1-boxproject', 'rgba(194, 194, 194, 0.7)');
         }
     }, [isDarkMode]);
 
