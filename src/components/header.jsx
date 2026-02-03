@@ -150,7 +150,7 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                     </div>
                 </div>
             </header>
-            <iframe data-testid="embed-iframe" className="BoxSpotify" src="https://open.spotify.com/embed/playlist/7fMmNMr76FUtDe4HSAnN4m?utm_source=generator" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="Spotify" data-testid="embed-iframe" className="BoxSpotify" src="https://open.spotify.com/embed/playlist/7fMmNMr76FUtDe4HSAnN4m?utm_source=generator" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </>
     );
 }

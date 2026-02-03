@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export default function Projects() {
     const repos = [
@@ -16,7 +16,7 @@ export default function Projects() {
             Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
         };
 
-        let isMounted = true; 
+        let isMounted = true;
 
         async function fetchAll() {
             const results = await Promise.all(
