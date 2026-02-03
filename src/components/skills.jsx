@@ -1,3 +1,5 @@
+import PawnIcon from '../img/Pawn.png';
+
 export default function skills() {
     return (
         <section id="skills" className="second-section">
@@ -10,6 +12,7 @@ export default function skills() {
                 <img src="https://skillicons.dev/icons?i=git&theme=dark&size=32" alt="Git" data-aos="fade-up" data-aos-duration="1500" />
                 <img src="https://skillicons.dev/icons?i=github&theme=dark&size=32" alt="GitHub" data-aos="fade-down" data-aos-duration="1500" />
                 <img src="https://skillicons.dev/icons?i=cpp&theme=dark&size=32" alt="C++" data-aos="fade-up" data-aos-duration="1500" />
+                <img src={PawnIcon} alt="Pawn" />
                 <img src="https://skillicons.dev/icons?i=discord&theme=dark&size=32" alt="Discord" data-aos="fade-down" data-aos-duration="1500" />
                 <img src="https://skillicons.dev/icons?i=vscode&theme=dark&size=32" alt="VSCode" data-aos="fade-up" data-aos-duration="1500" />
                 <img src="https://skillicons.dev/icons?i=nodejs&theme=dark&size=32" alt="Node.js" data-aos="fade-down" data-aos-duration="1500" />

@@ -61,7 +61,7 @@
     }
 
     & p {
-        color: #1e88e5;
+        color: #c01515;
         font-weight: 800;
     }
 }
@@ -88,21 +88,11 @@
 }
 
 .boxlangs img {
-    width: 30px;
-    padding: 5px;
+    width: 36px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
-    border-radius: 8px;
-}
-
-.boxlangs img:nth-child(odd) {
-    box-shadow: 0 2px 4px #c01515, inset 0 -2px 5px rgba(255, 255, 255, 0.2);
-}
-
-.boxlangs img:nth-child(2),
-.boxlangs img:nth-child(4),
-.boxlangs img:nth-child(6),
-.boxlangs img:nth-child(8) {
-    box-shadow: 0 2px 4px #1e88e5, inset 0 -2px 5px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
 }
 
 .boxdesclangs {
