@@ -10,6 +10,7 @@ export default function Projects() {
     // Arrays para cada repo
     const [stars, setStars] = useState([]);
     const [forks, setForks] = useState([]);
+    const [languages, setLanguages] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const hasFetched = useRef(false);
@@ -24,22 +25,28 @@ export default function Projects() {
                 setError(null);
 
                 const results = await Promise.all(
-                    repos.map(({ username, repo }) =>
-                        fetch(`https://api.github.com/repos/${username}/${repo}`)
-                            .then((res) => {
-                                if (!res.ok) return null;
-                                return res.json();
-                            })
-                            .then((data) => ({
-                                stars: data?.stargazers_count ?? 0,
-                                forks: data?.forks_count ?? 0,
-                            }))
-                            .catch(() => ({ stars: 0, forks: 0 }))
-                    )
+                    repos.map(async ({ username, repo }) => {
+                        try {
+                            const repoRes = await fetch(`https://api.github.com/repos/${username}/${repo}`);
+                            const repoData = repoRes.ok ? await repoRes.json() : null;
+
+                            const langRes = await fetch(`https://api.github.com/repos/${username}/${repo}/languages`);
+                            const langData = langRes.ok ? await langRes.json() : {};
+
+                            return {
+                                stars: repoData?.stargazers_count ?? 0,
+                                forks: repoData?.forks_count ?? 0,
+                                languages: Object.keys(langData),
+                            };
+                        } catch {
+                            return { stars: 0, forks: 0, languages: [] };
+                        }
+                    })
                 );
 
                 setStars(results.map((r) => r.stars));
                 setForks(results.map((r) => r.forks));
+                setLanguages(results.map((r) => r.languages));
             } catch {
                 setError("Falha ao buscar dados");
             } finally {
@@ -49,6 +56,7 @@ export default function Projects() {
 
         fetchAll();
     }, []);
+
 
     return (
         <section id="project" className="three-section">
@@ -65,17 +73,17 @@ export default function Projects() {
                     <div className="desc-card">
                         <p>Um projeto de aplicação web interativa que combina treino de calistenia (exercícios com o próprio peso) com um sistema de progressão gamificada.</p>
                         <div className="boxlangs">
-                            <img src="https://skillicons.dev/icons?i=html&theme=dark&size=32" alt="HTML" />
-                            <img src="https://skillicons.dev/icons?i=css&theme=dark&size=32" alt="CSS" />
-                            <img src="https://skillicons.dev/icons?i=js&theme=dark&size=32" alt="JavaScript" />
                             <img src="https://skillicons.dev/icons?i=react&theme=dark&size=32" alt="React" />
+                            <img src={`https://skillicons.dev/icons?i=${languages[0]?.[0]?.toLowerCase()}&theme=dark&size=32`} alt={languages[0]?.[0]} />
+                            <img src={`https://skillicons.dev/icons?i=${languages[0]?.[1]?.toLowerCase()}&theme=dark&size=32`} alt={languages[0]?.[1]} />
+                            <img src={`https://skillicons.dev/icons?i=${languages[0]?.[2]?.toLowerCase()}&theme=dark&size=32`} alt={languages[0]?.[2]} />
                         </div>
 
                         <div className="boxdesclangs">
                             <span>React</span>
-                            <span>Html</span>
-                            <span>Css</span>
-                            <span>JavaScript</span>
+                            <span>{languages[0]?.[0]}</span>
+                            <span>{languages[0]?.[1]}</span>
+                            <span>{languages[0]?.[2]}</span>
                             <span>FireBase</span>
                         </div>
                     </div>
@@ -99,17 +107,17 @@ export default function Projects() {
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap h-6 w-6"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
                         <div className="title-card2">
                             <h1>{repos[1].repo}</h1>
-                            <p>Java</p>
+                            <p>{languages[1]?.[0]}</p>
                         </div>
                     </div>
                     <div className="desc-card">
                         <p>ChatManager-MC é um plugin/mod para servidores Minecraft, escrito em Java, com foco em personalizar e gerenciar mensagens do chat do jogo.</p>
                         <div className="boxlangs">
-                            <img src="https://skillicons.dev/icons?i=java&theme=dark&size=32" alt="JAVA" />
+                            <img src={`https://skillicons.dev/icons?i=${languages[1]?.[0]?.toLowerCase()}&theme=dark&size=32`} alt={languages[1]?.[0]} />
                         </div>
 
                         <div className="boxdesclangs">
-                            <span>Java</span>
+                            <span>{languages[1]?.[0]}</span>
                         </div>
                     </div>
                     <div className="boximg">
@@ -132,7 +140,7 @@ export default function Projects() {
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap h-6 w-6"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
                         <div className="title-card2">
                             <h1>{repos[2].repo}</h1>
-                            <p>Amxx</p>
+                            <p>{languages[2]?.[1]}</p>
                         </div>
                     </div>
                     <div className="desc-card">
@@ -142,7 +150,7 @@ export default function Projects() {
                         </div>
 
                         <div className="boxdesclangs">
-                            <span>Pawn</span>
+                            <span>{languages[2]?.[1]}</span>
                         </div>
                     </div>
                     <div className="boximg">
