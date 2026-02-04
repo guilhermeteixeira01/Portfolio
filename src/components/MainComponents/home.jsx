@@ -268,10 +268,8 @@ export default function Home() {
                                         >
                                             <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
                                         </svg>
-                                        <p>
-                                            <p><a href="https://github.com/guilhermeteixeira01/minebrothers-web/pull/2"
-                                                target="_blank" rel="noreferrer">minebrothers-web#2</a> · 2nd pull request merged
-                                            </p>
+                                        <p><a href="https://github.com/guilhermeteixeira01/minebrothers-web/pull/2"
+                                            target="_blank" rel="noreferrer">minebrothers-web#2</a> · 2nd pull request merged
                                         </p>
                                     </div>
                                 </div>
