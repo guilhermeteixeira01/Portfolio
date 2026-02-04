@@ -403,8 +403,8 @@ header.active {
 
     header.active {
         width: 100vw;
-        height: 100vh;
-        padding-bottom: 750px;
+        height: 101vh;
+        padding-bottom: 758px;
     }
 
     .Title {
@@ -422,7 +422,8 @@ header.active {
 
     .MenuOptions {
         width: 101vw;
-        top: -30px;
+        height: 50vh;
+        top: 100px;
         right: -30px;
         justify-content: center;
         align-items: center;
