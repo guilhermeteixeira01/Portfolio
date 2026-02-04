@@ -18,12 +18,17 @@ header {
     -webkit-backdrop-filter: blur(12px);
 
     & .logodiv {
+        position: absolute;
+        top: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     & .btns {
+        position: absolute;
+        top: 24px;
+        right: 30px;
         display: flex;
         flex-direction: row;
         gap: 10px;
@@ -300,7 +305,6 @@ header {
 header.active {
     width: 100vw;
     height: 100vh;
-    padding-bottom: 863px;
 }
 
 .MenuContainer {
@@ -399,12 +403,16 @@ header.active {
 @media (max-width: 900px) {
     header {
         border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+        & .btns {
+            top: 18px;
+            right: 15px;
+        }
     }
 
     header.active {
         width: 100vw;
         height: 101vh;
-        padding-bottom: 758px;
     }
 
     .Title {
@@ -421,10 +429,10 @@ header.active {
     }
 
     .MenuOptions {
-        width: 101vw;
+        width: 100vw;
         height: 50vh;
         top: 100px;
-        right: -30px;
+        right: -12px;
         justify-content: center;
         align-items: center;
     }
