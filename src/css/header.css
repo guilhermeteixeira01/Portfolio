@@ -296,30 +296,15 @@ header {
     pointer-events: auto;
 }
 
-
 /* Menu options */
-.MenuContainer {
-    position: relative;
-}
-
-.MenuBackdrop {
-    display: none;
-    position: fixed;
-    top: 148%;
+header.active {
     width: 100vw;
     height: 100vh;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    background: radial-gradient(ellipse at bottom right, var(--color-galaxy1), var(--color-galaxy2));
-    z-index: 100;
-
-    transition: right 0.2s ease;
-    pointer-events: none;
+    padding-bottom: 863px;
 }
 
-.MenuBackdrop.active {
-    display: block;
-    right: -8px;
-    pointer-events: auto;
+.MenuContainer {
+    position: relative;
 }
 
 .MenuOptions {
@@ -416,6 +401,12 @@ header {
         border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     }
 
+    header.active {
+        width: 100vw;
+        height: 100vh;
+        padding-bottom: 750px;
+    }
+
     .Title {
         display: none;
     }
@@ -429,18 +420,9 @@ header {
         height: 39px;
     }
 
-    .MenuBackdrop {
-        top: 120%;
-        width: 101vw;
-        border-top: 2px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .MenuBackdrop.active {
-        right: -36px;
-    }
-
     .MenuOptions {
         width: 101vw;
+        top: -30px;
         right: -30px;
         justify-content: center;
         align-items: center;

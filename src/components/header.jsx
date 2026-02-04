@@ -54,7 +54,7 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
 
     return (
         <>
-            <header>
+            <header className={menuOpen ? "active" : ""}>
                 <div className="logodiv">
                     <h1 className="Title" data-aos="flip-left">Guilherme Teixeira</h1>
                 </div>
@@ -164,15 +164,12 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                             </span>
                         </button>
 
-                        {/* Camada de fundo para blur */}
-                        {<div className={`MenuBackdrop ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(false)} />}
-
                         {/* Menu com links */}
                         {menuOpen && (
                             <ul className="MenuOptions">
-                                <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-                                <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
-                                <li><a href="#project" onClick={() => setMenuOpen(false)}>Projects</a></li>
+                                <li><a href="#home" onClick={() => setMenuOpen(false)}>Início</a></li>
+                                <li><a href="#skills" onClick={() => setMenuOpen(false)}>Habilidades</a></li>
+                                <li><a href="#project" onClick={() => setMenuOpen(false)}>Projetos</a></li>
                                 <li><a href="#home" onClick={() => setMenuOpen(false)}>...</a></li>
                             </ul>
                         )}

@@ -3,7 +3,7 @@ import PawnIcon from '../../img/icons/Pawn.png';
 export default function skills() {
     return (
         <section id="skills" className="second-section">
-            <h1 data-aos="flip-up" data-aos-duration="1500">Tech Stack</h1>
+            <h1 data-aos="flip-up" data-aos-duration="1500">Habilidades</h1>
             <div className="skills-container">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" data-aos="fade-up" data-aos-duration="1500" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" data-aos="fade-down" data-aos-duration="1500" />

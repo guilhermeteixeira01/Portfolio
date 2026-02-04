@@ -69,7 +69,7 @@ export default function Projects() {
 
     return (
         <section id="project" className="three-section">
-            <h1 data-aos="flip-up" data-aos-duration="1500">Project</h1>
+            <h1 data-aos="flip-up" data-aos-duration="1500">Projetos</h1>
             <div className="divcards">
                 {!loading && apiError && (
                     <div className="repo-error-card">
