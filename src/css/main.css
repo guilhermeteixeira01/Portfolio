@@ -98,7 +98,7 @@ section h1 {
 .My h4 {
     font-size: 28px;
     font-weight: 400;
-    color: #ccc;
+    color: #ff0000;
     margin: 25px 0 40px 0;
 }
 
@@ -112,7 +112,7 @@ section h1 {
 .My .boxname h3 {
     font-size: 50px;
     font-weight: 400;
-    color: #aaa;
+    color: #ea00ff;
     margin-bottom: 15px;
     margin-top: auto;
 }
@@ -121,65 +121,24 @@ section h1 {
     margin-left: 10px;
     width: 120px;
     filter: drop-shadow(0 0 2px rgb(255, 255, 255)) drop-shadow(0 0 5px rgb(255, 255, 255));
-    animation: shadowPower 6s ease-in-out infinite;
+    animation: EffectStitch 6s ease-in-out infinite;
 }
 
-@keyframes shadowPower {
+@keyframes EffectStitch {
 
     0% {
         filter: drop-shadow(0 0 2px rgb(255, 255, 255)) drop-shadow(0 0 5px rgb(255, 255, 255));
     }
 
     100% {
-        filter: drop-shadow(0 0 4px rgb(255, 1, 1)) drop-shadow(0 0 10px rgb(104, 0, 0));
+        filter: drop-shadow(0 0 4px rgb(255, 175, 1)) drop-shadow(0 0 10px rgb(255, 62, 0));
     }
-}
-
-.contribution-graph {
-    margin-top: 40px;
-    width: 70%;
-    cursor: pointer;
 }
 
 /* BOTÕES */
 
 .boxbuttons {
     width: 70%;
-}
-
-.My .Resume {
-    position: relative;
-    width: 100%;
-    padding: 16px 28px;
-    margin-bottom: 16px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #c01515, #1e88e5);
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.My .Resume::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10px;
-    right: -10px;
-    bottom: 0;
-    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(30, 136, 229, 0.5));
-    filter: blur(20px);
-    z-index: -1;
-    border-radius: 10px;
-}
-
-.My .Resume:hover {
-    background: linear-gradient(90deg, #1e88e5, #1e88e5);
-}
-
-.My .Resume:hover::before {
-    background: linear-gradient(to right, rgba(30, 136, 229, 0.5), rgba(30, 136, 229, 0.5));
 }
 
 .My .midiasocial {
@@ -213,9 +172,9 @@ section h1 {
 
 /* Cores no hover */
 .hireme:hover,
-.github:hover,
-.linkedin:hover {
-    background: #0a66c2;
+.instagram:hover,
+.whatsapp:hover {
+    background: linear-gradient(90deg, #00E5FF, #FF2FB3);
 }
 
 .box {
@@ -230,7 +189,7 @@ section h1 {
 
 .box .Perfil {
     width: 100%;
-    max-width: 300px;
+    max-width: 650px;
     border-radius: 20px;
     animation: rainbowGlow 10s linear infinite;
     transition: transform 0.4s ease;
@@ -243,15 +202,15 @@ section h1 {
 
 @keyframes rainbowGlow {
     0% {
-        filter: drop-shadow(0 0 4px #00e5ff) drop-shadow(0 0 10px #00bcd4);
+        filter: drop-shadow(0 0 4px #00bbff) drop-shadow(0 0 10px #FF1493);
     }
 
     50% {
-        filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 15px #d40000);
+        filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 15px #ffffff);
     }
 
     100% {
-        filter: drop-shadow(0 0 4px #00e5ff) drop-shadow(0 0 10px #00bcd4);
+        filter: drop-shadow(0 0 4px #00bbff) drop-shadow(0 0 10px #FF1493);
     }
 }
 
@@ -293,6 +252,18 @@ section h1 {
     .My,
     .box {
         max-width: 100%;
+    }
+
+    .box {
+        position: absolute;
+        top: 500px;
+        max-width: 90%;
+    }
+
+    .hireme,
+    .instagram,
+    .whatsapp {
+        background: linear-gradient(to top, #00E5FF, #FF2FB3);
     }
 
     .My h1 {
@@ -340,7 +311,6 @@ section h1 {
     .My h1 {
         font-size: 60px;
         margin: 0;
-        background: linear-gradient(90deg, #1e90ff, #00bfff);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -350,7 +320,6 @@ section h1 {
     .My h4 {
         font-size: 22px;
         font-weight: 400;
-        color: #ccc;
         margin: 25px 0 40px 0;
     }
 
@@ -364,14 +333,13 @@ section h1 {
     .My .boxname h3 {
         font-size: 40px;
         font-weight: 400;
-        color: #aaa;
         margin-bottom: 15px;
         margin-top: auto;
     }
 
     .box .Perfil {
         width: 100%;
-        max-width: 250px;
+        max-width: 450px;
         border-radius: 20px;
         animation: rainbowGlow 5s linear infinite;
         transition: transform 0.4s ease;

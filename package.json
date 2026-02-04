@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "Mimo&Art",
   "version": "0.1.0",
-  "homepage": "https://guilhermeteixeira01.github.io/Portfolio",
+  "homepage": "https://guilhermeteixeira01.github.io/Mimo-Arte",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",

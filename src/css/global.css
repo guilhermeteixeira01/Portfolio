@@ -1,8 +1,5 @@
 @import url(header.css);
 @import url(main.css);
-@import url(achievements.css);
-@import url(skills.css);
-@import url(project.css);
 
 * {
     margin: 0;
@@ -17,14 +14,11 @@
 body {
     overflow-x: hidden;
     min-height: 100vh;
-    background: radial-gradient(ellipse at bottom right, var(--color-galaxy1), var(--color-galaxy2));
+    background: linear-gradient(90deg, #7EC8E3 0%, #FF1493 100%);
 }
 
 :root {
     --colorprimary: snow;
-    --color-galaxy1: #1b2735 0%;
-    --color-galaxy2: #090a0f 100%;
-    --gradient1-boxproject: rgba(194, 194, 194, 0.7);
 }
 
 ::-webkit-scrollbar {
@@ -37,18 +31,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg,
-            #1E90FF,
-            #0A3D91);
+            #7EC8E3,
+            #FF1493);
     border-radius: 10px;
-    border: 2px solid #0A3D91;
+    border: 2px solid #FF1493;
     cursor: pointer;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg,
-            #ff0000,
-            #1E90FF);
-    box-shadow: 0 0 6px #1E90FF, 0 0 12px #1E90FF;
 }
 
 #stars {
