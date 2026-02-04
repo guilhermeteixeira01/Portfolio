@@ -4,21 +4,38 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [stars, setStars] = useState(0);
+    const [loading, setLoading] = useState(true);
+    const [apiError, setApiError] = useState(false);
 
     useEffect(() => {
+        let isMounted = true;
+
         async function fetchStars() {
             try {
+                setLoading(true);
+                setApiError(false);
+
                 const response = await fetch(`https://api.github.com/repos/${username}/${repo}`);
                 if (!response.ok) throw new Error(`Erro na resposta: ${response.status}`);
 
                 const data = await response.json();
-                setStars(data.stargazers_count ?? 0);
+
+                if (isMounted) {
+                    setStars(data.stargazers_count ?? 0);
+                }
             } catch (err) {
                 console.error("Erro ao buscar estrelas do GitHub:", err);
+                if (isMounted) setApiError(true);
+            } finally {
+                if (isMounted) setLoading(false);
             }
         }
 
         fetchStars();
+
+        return () => {
+            isMounted = false;
+        };
     }, [username, repo]);
 
     useEffect(() => {
@@ -80,21 +97,39 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
                         </label>
                     </div>
 
-                    <button
-                        className="Githubstar"
-                        onClick={() => window.open(`https://github.com/${username}/${repo}`, "_blank")}
-                    >
-                        <span className="icon github">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    fill="currentColor"
-                                    d="M12 .5C5.73.5.5 5.74.5 12.04c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.17c-3.2.7-3.87-1.38-3.87-1.38-.53-1.35-1.29-1.71-1.29-1.71-1.06-.74.08-.73.08-.73 1.17.08 1.79 1.21 1.79 1.21 1.04 1.8 2.73 1.28 3.4.98.11-.76.41-1.28.74-1.57-2.55-.3-5.23-1.29-5.23-5.74 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.5.11-3.12 0 0 .98-.32 3.2 1.19a11 11 0 0 1 5.83 0c2.22-1.51 3.2-1.19 3.2-1.19.63 1.62.23 2.82.11 3.12.75.82 1.2 1.85 1.2 3.12 0 4.46-2.69 5.43-5.25 5.72.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.79.56A11.55 11.55 0 0 0 23.5 12.04C23.5 5.74 18.27.5 12 .5z"
-                                />
-                            </svg>
-                        </span>
-                        <span className="label">{stars}</span>
-                        <span className="icon star">★</span>
-                    </button>
+                    {!loading && apiError && (
+                        <button
+                            className="Githubstaroff"
+                        >
+                            <span className="icon githubooff">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        fill="currentColor"
+                                        d="M12 .5C5.73.5.5 5.74.5 12.04c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.17c-3.2.7-3.87-1.38-3.87-1.38-.53-1.35-1.29-1.71-1.29-1.71-1.06-.74.08-.73.08-.73 1.17.08 1.79 1.21 1.79 1.21 1.04 1.8 2.73 1.28 3.4.98.11-.76.41-1.28.74-1.57-2.55-.3-5.23-1.29-5.23-5.74 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.5.11-3.12 0 0 .98-.32 3.2 1.19a11 11 0 0 1 5.83 0c2.22-1.51 3.2-1.19 3.2-1.19.63 1.62.23 2.82.11 3.12.75.82 1.2 1.85 1.2 3.12 0 4.46-2.69 5.43-5.25 5.72.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.79.56A11.55 11.55 0 0 0 23.5 12.04C23.5 5.74 18.27.5 12 .5z"
+                                    />
+                                </svg>
+                            </span>
+                            <span className="label">API OFF</span>
+                            <span className="icon error">🚫</span>
+                        </button>
+                    )}
+                    {!loading && !apiError && (
+                        <button
+                            className="Githubstar"
+                            onClick={() => window.open(`https://github.com/${username}/${repo}`, "_blank")}
+                        >
+                            <span className="icon github">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        fill="currentColor"
+                                        d="M12 .5C5.73.5.5 5.74.5 12.04c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.17c-3.2.7-3.87-1.38-3.87-1.38-.53-1.35-1.29-1.71-1.29-1.71-1.06-.74.08-.73.08-.73 1.17.08 1.79 1.21 1.79 1.21 1.04 1.8 2.73 1.28 3.4.98.11-.76.41-1.28.74-1.57-2.55-.3-5.23-1.29-5.23-5.74 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.5.11-3.12 0 0 .98-.32 3.2 1.19a11 11 0 0 1 5.83 0c2.22-1.51 3.2-1.19 3.2-1.19.63 1.62.23 2.82.11 3.12.75.82 1.2 1.85 1.2 3.12 0 4.46-2.69 5.43-5.25 5.72.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.79.56A11.55 11.55 0 0 0 23.5 12.04C23.5 5.74 18.27.5 12 .5z"
+                                    />
+                                </svg>
+                            </span>
+                            <span className="label">{stars}</span>
+                            <span className="icon star">★</span>
+                        </button>
+                    )}
 
                     <div className="MenuContainer">
                         <button
