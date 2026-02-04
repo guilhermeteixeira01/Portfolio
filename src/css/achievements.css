@@ -1,0 +1,728 @@
+/* Achievements */
+
+.boxachievements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxachievements>h1 {
+    font-size: 2rem;
+    margin: 20px;
+    color: #00bfff;
+}
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.achievements img {
+    width: 80px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.achievements img:hover {
+    cursor: pointer;
+}
+
+/* 1 — Galaxy Brain (azul cósmico) */
+.achievements img:nth-child(1):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 8px #1e90ff) drop-shadow(0 0 16px #4fc3f7);
+}
+
+/* 2 — Pair Extraordinaire (dourado) */
+.achievements img:nth-child(2):hover {
+    transform: rotate(-6deg) scale(1.15);
+    filter: drop-shadow(0 0 10px #ffd700) drop-shadow(0 0 20px #ffb300);
+}
+
+/* 3 — Pull Shark (ciano / oceano) */
+.achievements img:nth-child(3):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 10px #00e5ff) drop-shadow(0 0 20px #00bcd4);
+}
+
+/* 4 — Quickdraw (roxo elétrico) */
+.achievements img:nth-child(4):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 10px #7c4dff) drop-shadow(0 0 22px #651fff);
+}
+
+/* 5 — YOLO (verde neon) */
+.achievements img:nth-child(5):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 10px #76ff03) drop-shadow(0 0 22px #00e676);
+}
+
+/* 6 — Starstruck (vermelho estrela) */
+.achievements img:nth-child(6):hover {
+    transform: scale(1.2) rotate(6deg);
+    filter: drop-shadow(0 0 12px #ff5252) drop-shadow(0 0 24px #ff1744);
+}
+
+#galaxybrain,
+#pairextraordinaire,
+#pullshark,
+#quickdraw,
+#yolo,
+#starstruck {
+    cursor: pointer;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
+
+.title::after {
+    background-color: #9198a1;
+    content: '';
+    display: block;
+    width: 410px;
+    position: relative;
+    height: 1px;
+    bottom: -10px;
+}
+
+a {
+    color: #4493f8;
+}
+
+.link {
+    position: absolute;
+    bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.timeline2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 28px;
+}
+
+.timeline2::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    bottom: 18px;
+    width: 2px;
+    background: #30363d;
+}
+
+.unlock {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+    left: -27px;
+}
+
+.linkref {
+    left: -25px;
+    bottom: 7px;
+}
+
+
+.icon.trophy {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    fill: #8b949e;
+    background: #0d1117;
+    z-index: 1;
+}
+
+.icon.dot {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    border-radius: 50%;
+    background: #6e7681;
+    z-index: 1;
+
+    margin-top: 0;
+    align-self: center;
+}
+
+
+.timeline2 .unlock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.timeline2 .unlock svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background: #0d1117;
+    z-index: 1;
+}
+
+.timeline2 .linkref {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+}
+
+.timeline2 .linkref svg {
+    width: 8px;
+    height: 8px;
+    margin-top: 6px;
+    flex-shrink: 0;
+    fill: #6e7681;
+    background: #0d1117;
+    z-index: 1;
+}
+
+.timeline2 p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.unlock p {
+    font-size: 0.85rem;
+    color: #8b949e;
+}
+
+.linkref p {
+    font-size: 0.98rem;
+    color: #c9d1d9;
+}
+
+
+
+/* Galaxy Brain */
+
+.boxgalaxybrain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxgalaxybrain .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/galaxy-brain-detail.png);
+}
+
+.boxgalaxybrain .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxgalaxybrain .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.boxgalaxybrain .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxgalaxybrain .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+/* Pair Extraordinaire */
+
+.boxpairextraordinaire {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxpairextraordinaire .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/pair-extraordinaire-detail.png);
+}
+
+.boxpairextraordinaire .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxpairextraordinaire .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxpairextraordinaire .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxpairextraordinaire .info p {
+    width: 100%;
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxpairextraordinaire .info p span {
+    color: #9198a1;
+}
+
+/* Pull Shark */
+
+.boxpullshark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxpullshark .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/pull-shark-detail.png);
+}
+
+.boxpullshark .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxpullshark .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxpullshark .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxpullshark .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxpullshark .info p span {
+    color: #9198a1;
+}
+
+/* Quick Draw */
+
+.boxquickdraw {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxquickdraw .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/quickdraw-detail.png);
+}
+
+.boxquickdraw .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxquickdraw .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxquickdraw .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxquickdraw .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxquickdraw .info p span {
+    color: #9198a1;
+}
+
+
+/* Yolo */
+
+.boxyolo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxyolo .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/yolo-detail.png);
+}
+
+.boxyolo .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxyolo .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxyolo .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxyolo .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+.boxyolo .info p span {
+    color: #9198a1;
+}
+
+.boxstarstruck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxstarstruck .card {
+    position: relative;
+    width: 488px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Achievements\ Github/starstruck-detail.png);
+}
+
+.boxstarstruck .card>img {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+}
+
+.boxstarstruck .info {
+    width: 488px;
+    height: 206px;
+    padding: 16px;
+    border-radius: 0 0 6px 6px;
+    background: radial-gradient(#151b23, #0d1117);
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.boxstarstruck .info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.boxstarstruck .info p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9198a1;
+}
+
+/* boxsair */
+
+.boxsair,
+.boxsair2,
+.boxsair3,
+.boxsair4,
+.boxsair5,
+.boxsair6 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(145deg, #444c56, #2b313a);
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: all 0.25s ease;
+}
+
+.boxsair i,
+.boxsair2 i,
+.boxsair3 i,
+.boxsair4 i,
+.boxsair5 i,
+.boxsair6 i {
+    font-size: 1.0rem;
+    color: #f0f6fc;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.boxsair:hover,
+.boxsair2:hover,
+.boxsair3:hover,
+.boxsair4:hover,
+.boxsair5:hover,
+.boxsair6:hover {
+    background: linear-gradient(145deg, #535353, #333333);
+    box-shadow: 0 6px 16px rgb(14, 14, 14);
+    transform: scale(1.08);
+    color: #ffffff
+}
+
+@media screen and (max-width: 900px) {
+    .timeline2 {
+        gap: 10px;
+        padding-left: 22px;
+    }
+
+    .timeline2::before {
+        left: 6px;
+        top: 10px;
+        bottom: 14px;
+        width: 2px;
+    }
+
+    .timeline2 .unlock {
+        left: -23px;
+        gap: 8px;
+    }
+
+    .timeline2 .linkref {
+        left: -21px;
+    }
+
+    .timeline2 .unlock svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline2 .linkref svg {
+        width: 7px;
+        height: 7px;
+        margin-top: 5px;
+    }
+
+    .timeline2 p {
+        font-size: 0.85rem;
+        line-height: 1.45;
+        word-break: break-word;
+    }
+
+    .unlock p {
+        font-size: 0.8rem;
+    }
+
+    .linkref p {
+        font-size: 0.85rem;
+    }
+
+    /* ---------- SEÇÃO ACHIEVEMENTS ---------- */
+    .boxgalaxybrain .card,
+    .boxpairextraordinaire .card,
+    .boxpullshark .card,
+    .boxstarstruck .card,
+    .boxquickdraw .card,
+    .boxyolo .card {
+        width: 360px;
+    }
+
+    .boxgalaxybrain .info,
+    .boxpairextraordinaire .info,
+    .boxpullshark .info,
+    .boxstarstruck .info,
+    .boxquickdraw .info,
+    .boxyolo .info {
+        width: 360px;
+        height: 230px;
+    }
+
+    .boxachievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .boxachievements>h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .achievements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+
+    .achievements>img {
+        width: 80px;
+    }
+
+    .inicio-container p {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .boxgalaxybrain .info p,
+    .boxpairextraordinaire .info p,
+    .boxpullshark .info p,
+    .boxquickdraw .info p,
+    .boxyolo .info p,
+    .boxstarstruck .info p {
+        font-size: 0.65rem;
+    }
+
+    .title::after {
+        width: 325px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 768px) {
+    .achievements>img {
+        width: 75px;
+    }
+}

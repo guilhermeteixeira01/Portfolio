@@ -1,7 +1,8 @@
 
 import { useEffect, useRef } from "react";
 import './css/global.css';
-import { initGlitter } from "./components/Glitter";
+import { initStars } from "./components/stars";
+import StarCanvas from "./components/StarCanvas";
 
 import Header from './components/header';
 import Main from './components/Main';
@@ -13,7 +14,7 @@ function App() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    const cleanup = initGlitter(canvasRef.current);
+    const cleanup = initStars(canvasRef.current);
     return cleanup;
   }, []);
 
@@ -34,6 +35,7 @@ function App() {
         }}
       />
       {/* Conteúdo do site */}
+      <StarCanvas />
       <Header />
       <Main />
     </div>

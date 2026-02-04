@@ -1,19 +1,19 @@
 {
-  "short_name": "Mimo & Arte",
-  "name": "Mimo & Arte",
+  "short_name": "Guilherme Teixeira",
+  "name": "Guilherme Teixeira",
   "icons": [
     {
-      "src": "icon32.png",
+      "src": "lupa.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "icon32.png",
+      "src": "lupa.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icon32.png",
+      "src": "lupa.png",
       "type": "image/png",
       "sizes": "512x512"
     }
