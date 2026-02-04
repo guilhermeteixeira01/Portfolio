@@ -178,8 +178,8 @@ header {
     font-weight: 500;
 
     color: var(--colorprimary);
+    background: transparent;
 
-    background: linear-gradient(145deg, #1f1f1f, #141414);
     border: 2px solid #ff3b3b;
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
     animation: pulseGlow 2s infinite ease-in-out;
@@ -343,14 +343,6 @@ header {
 
 .MenuOptions li a:hover {
     color: #ff0000;
-}
-
-.BoxSpotify {
-    position: fixed;
-    width: 350px;
-    bottom: -60px;
-    right: 10px;
-    z-index: 3;
 }
 
 /* responsividade */
