@@ -171,7 +171,7 @@ header {
     align-items: center;
     gap: 8px;
 
-    padding: 5px 5px;
+    padding: 4px 5px;
     min-width: 100px;
 
     font-size: 15px;
@@ -389,7 +389,7 @@ header {
     }
 
     .Githubstaroff {
-        padding: 6px 12px;
+        padding: 4px 10px;
         font-size: 10px;
         min-width: 90px;
     }
@@ -411,10 +411,6 @@ header {
     .switchinput:checked+.switchlabel:after {
         left: 58px;
         transform: translateX(-100%);
-    }
-
-    .BoxSpotify {
-        display: none;
     }
 }
 
