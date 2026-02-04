@@ -131,6 +131,7 @@ section h1 {
 .contribution-graph {
     margin-top: 40px;
     width: 70%;
+    cursor: pointer;
 }
 
 /* BOTÕES */

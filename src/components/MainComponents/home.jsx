@@ -66,7 +66,7 @@ export default function Home() {
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcSet="https://raw.githubusercontent.com/guilhermeteixeira01/guilhermeteixeira01/output/pacman-contribution-graph-dark.svg" />
                     <source media="(prefers-color-scheme: light)" srcSet="https://raw.githubusercontent.com/guilhermeteixeira01/guilhermeteixeira01/output/pacman-contribution-graph.svg" />
-                    <img className="contribution-graph" alt="pacman contribution graph" src="https://raw.githubusercontent.com/guilhermeteixeira01/guilhermeteixeira01/output/pacman-contribution-graph.svg" />
+                    <img onClick={() => window.open(`https://github.com/guilhermeteixeira01`, "_blank")} className="contribution-graph" alt="pacman contribution graph" src="https://raw.githubusercontent.com/guilhermeteixeira01/guilhermeteixeira01/output/pacman-contribution-graph.svg" />
                 </picture>
             </div>
 
