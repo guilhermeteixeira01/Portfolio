@@ -7,7 +7,7 @@ export default function Main() {
         <>
             <Home />
             <Skills />
-            <Projects />
+            {/* <Projects /> */}
         </>
     );
 }
