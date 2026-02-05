@@ -192,7 +192,6 @@ header {
 
     border: 2px solid #ff3b3b;
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
-    animation: pulseGlow 2s infinite ease-in-out;
     border-radius: 12px;
 
     cursor: pointer;
@@ -225,7 +224,6 @@ header {
     justify-content: flex-end;
 
     font-size: 18px;
-    transform: translateY(-1px);
 }
 
 .Githubstar .label {
@@ -343,7 +341,6 @@ header.active {
     header {
         flex-direction: column;
         align-items: center;
-        height: auto;
         height: 70px;
         padding: 8px 16px;
     }
@@ -405,6 +402,7 @@ header.active {
 
         & .btns {
             top: 18px;
+            left: 20px;
             width: 90%;
             justify-content: space-between;
         }
