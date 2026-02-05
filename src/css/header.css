@@ -303,7 +303,6 @@ header {
 
 /* Menu options */
 header.active {
-    width: 100vw;
     height: 100vh;
 }
 
@@ -411,7 +410,6 @@ header.active {
     }
 
     header.active {
-        width: 100vw;
         height: 101vh;
     }
 
@@ -438,6 +436,6 @@ header.active {
     }
 
     .MenuOptions li a {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
