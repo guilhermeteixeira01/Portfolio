@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       {/* Fundo de estrelas */}
-      <canvas
+      {/* <canvas
         ref={canvasRef}
         id="stars"
         style={{
@@ -33,7 +33,7 @@ function App() {
           zIndex: -1,
           pointerEvents: "none"
         }}
-      />
+      /> */}
       {/* Conteúdo do site */}
       {/* <StarCanvas /> */}
       <Header />
