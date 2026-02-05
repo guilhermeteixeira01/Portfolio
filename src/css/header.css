@@ -405,7 +405,8 @@ header.active {
 
         & .btns {
             top: 18px;
-            right: 15px;
+            width: 90%;
+            justify-content: space-between;
         }
     }
 
@@ -415,11 +416,6 @@ header.active {
 
     .Title {
         display: none;
-    }
-
-    .btns {
-        width: 90%;
-        justify-content: space-between;
     }
 
     .MenuContainer button {
