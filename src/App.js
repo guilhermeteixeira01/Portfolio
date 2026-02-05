@@ -36,7 +36,7 @@ function App() {
       />
       {/* Conteúdo do site */}
       <StarCanvas />
-      <Header />
+      {/* <Header /> */}
       <Main />
     </div>
   );
