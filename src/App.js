@@ -1,8 +1,8 @@
 
 import { useEffect, useRef } from "react";
 import './css/global.css';
-import { initStars } from "./components/stars";
-import StarCanvas from "./components/StarCanvas";
+/* import { initStars } from "./components/stars";
+import StarCanvas from "./components/StarCanvas"; */
 
 import Header from './components/header';
 import Main from './components/Main';
@@ -11,12 +11,12 @@ console.log('%c⚡💥 Bem-vindo, desenvolvedor curioso! 💥⚡', 'color: purpl
 console.log('%c⚡ Creditos: Guilherme Teixeira ⚡', 'background: linear-gradient(to right, red, black); color: white; font-size: 15px; font-weight: bold; padding: 4px;');
 
 function App() {
-  const canvasRef = useRef(null);
+  /* const canvasRef = useRef(null);
 
   useEffect(() => {
     const cleanup = initStars(canvasRef.current);
     return cleanup;
-  }, []);
+  }, []); */
 
   return (
     <div className="App">
