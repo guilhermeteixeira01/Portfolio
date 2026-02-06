@@ -123,7 +123,7 @@ section h1 {
 }
 
 .My h4 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bolder;
     color: snow;
     text-shadow: 2px 2px 2px #c01515, -2px -2px 2px #1e88e5;
@@ -323,6 +323,11 @@ section h1 {
 
     .My h1 {
         font-size: 30px;
+        width: 17.5ch;
+    }
+
+    .My h4 {
+        font-size: 30px;
     }
 
     .box img {
@@ -374,7 +379,7 @@ section h1 {
     }
 
     .My h4 {
-        font-size: 22px;
+        font-size: 40px;
         font-weight: 400;
         color: #ccc;
         margin: 25px 0 40px 0;
