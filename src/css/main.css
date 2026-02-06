@@ -12,11 +12,9 @@ section h1 {
     color: var(--colorprimary);
 }
 
-.second-section h1 {
-    font-size: 80px;
-}
-
-.three-section h1 {
+.second-section h1,
+.three-section h1,
+.four-section h1 {
     font-size: 80px;
 }
 
@@ -96,9 +94,10 @@ section h1 {
 }
 
 .My h4 {
-    font-size: 28px;
-    font-weight: 400;
-    color: #ccc;
+    font-size: 30px;
+    font-weight: bolder;
+    color: snow;
+    text-shadow: 2px 2px 2px #c01515, -2px -2px 2px #1e88e5;
     margin: 25px 0 40px 0;
 }
 
@@ -267,11 +266,9 @@ section h1 {
         margin-top: 90px;
     }
 
-    .second-section h1 {
-        font-size: 50px;
-    }
-
-    .three-section h1 {
+    .second-section h1,
+    .three-section h1,
+    .four-section h1 {
         font-size: 50px;
     }
 

@@ -1,0 +1,195 @@
+.four-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.four-section .timeline {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.four-section .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -2px;
+}
+
+.four-section .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.four-section .container::after {
+    content: '\f501';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    right: -17px;
+    background-color: snow;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    font-size: 1.89rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Font Awesome\ 5 Free";
+    color: black;
+}
+
+.four-section .left {
+    left: 0;
+}
+
+.four-section .right {
+    left: 50%;
+}
+
+.four-section .left::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgba(255, 255, 255, 0.3);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--gradient1-boxproject);
+}
+
+.four-section .right::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgba(255, 255, 255, 0.3);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--gradient1-boxproject) transparent transparent;
+}
+
+.four-section .right::after {
+    left: -16px;
+}
+
+.four-section .content {
+    background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
+    position: relative;
+    border-radius: 6px;
+}
+
+.four-section .content .tag {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.four-section .content .desc {
+    margin-left: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.four-section .content .tag h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #00e5ff;
+}
+
+.four-section .content .desc span {
+    font-size: 2rem;
+    color: black;
+}
+
+.four-section .content .desc p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--colorprimary);
+}
+
+@media (max-width: 900px) {
+    .four-section .timeline {
+        margin-top: 1rem;
+    }
+
+    .four-section .timeline::after {
+        left: 10px;
+    }
+
+    .four-section .container {
+        width: 100%;
+        padding-left: 3rem;
+        padding-right: 0;
+    }
+
+    .four-section .container::after {
+        font-size: 1.2rem;
+    }
+
+    .four-section .container::before {
+        left: 61px;
+    }
+
+    .four-section .left::after {
+        left: -5px;
+    }
+
+    .four-section .left::before {
+        width: 0%;
+    }
+
+    .four-section .right::after {
+        left: -5px;
+    }
+
+    .four-section .right {
+        left: 0%;
+    }
+
+    .four-section .content .tag {
+        font-size: 1.5rem;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .four-section .content .desc {
+        margin-left: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .four-section .content .tag h2 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .four-section .content .desc span {
+        font-size: 0.9rem;
+    }
+
+    .four-section .content .desc p {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .four-section .left::before {
+        left: 38px;
+        border: medium solid rgba(255, 255, 255, 0.3);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--gradient1-boxproject) transparent transparent
+    }
+
+    .four-section .right::before {
+        left: 38px;
+    }
+}

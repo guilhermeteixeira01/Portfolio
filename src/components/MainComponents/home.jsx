@@ -43,10 +43,10 @@ export default function Home() {
                     <h3 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Olá, Eu sou</h3>
                 </div>
                 <h1 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="550">Guilherme Teixeira</h1>
-                <h4 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">Full Stack Web Developer</h4>
+                <h4 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">Desenvolvedor Full Stack</h4>
 
                 <div className="boxbuttons">
-                    <button className="Resume" onClick={() => window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank")} data-aos="flip-up" data-aos-duration="1500" data-aos-delay="800">Resume</button>
+                    <button className="Resume" onClick={() => window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank")} data-aos="flip-up" data-aos-duration="1500" data-aos-delay="800">Resumo</button>
                     <div className="midiasocial">
                         <button className="iconBtn hireme" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">contrate-me</button>
                         <button className="iconBtn github" aria-label="GitHub" onClick={() => window.open("https://github.com/guilhermeteixeira01", "_blank")} data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">

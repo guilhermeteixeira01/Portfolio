@@ -72,7 +72,7 @@ export default function Projects() {
             <h1 data-aos="flip-up" data-aos-duration="1500">Projetos</h1>
             <div className="divcards">
                 {!loading && apiError && (
-                    <div className="repo-error-card">
+                    <div className="repo-error-card" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="600">
                         <div className="repo-error-icon">🚫</div>
                         <h2>Repositórios Indisponíveis</h2>
                         <p>
@@ -83,7 +83,7 @@ export default function Projects() {
                 )}
                 {!loading && !apiError && (
                     <>
-                        <div className="card-project">
+                        <div className="card-project" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="600">
                             <div className="title-card">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap h-6 w-6"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
                                 <div className="title-card2">
@@ -124,7 +124,7 @@ export default function Projects() {
                             </div>
                         </div>
 
-                        <div className="card-project">
+                        <div className="card-project" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="600">
                             <div className="title-card">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap h-6 w-6"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
                                 <div className="title-card2">
@@ -157,7 +157,7 @@ export default function Projects() {
                             </div>
                         </div>
 
-                        <div className="card-project">
+                        <div className="card-project" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="600">
                             <div className="title-card">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap h-6 w-6"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
                                 <div className="title-card2">
