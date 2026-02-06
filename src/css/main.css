@@ -91,6 +91,35 @@ section h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.1;
+    width: 16.7ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 6s steps(15) infinite, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 16.7ch;
+    }
+
+    60% {
+        width: 16.7ch;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .My h4 {
