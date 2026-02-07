@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 
-import PawnIcon from '../../img/icons/Pawn.png';
-import FireBase from '../../img/icons/FireBase.jfif';
 import RepoAmxx from '../../img/projects/AmxRepo.jfif';
 import RepoChatMc from '../../img/projects/ChatManagerRepo.jpg';
 import RepoCalistenic from '../../img/projects/RepoCalistenic.jpeg';
+
+import { PawnIcon, FireBase } from "../constants";
 
 export default function Projects() {
     const repos = useMemo(() => [

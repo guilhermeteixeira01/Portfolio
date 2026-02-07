@@ -13,7 +13,7 @@
     width: 120px;
     height: 120px;
     padding: 15px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
     transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
