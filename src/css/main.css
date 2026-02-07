@@ -322,7 +322,10 @@ section h1 {
     }
 
     .My h1 {
-        font-size: 28px;
+        font-size: 30px;
+        animation: none;
+        border-right: none;
+        width: 100%;
     }
 
     .My h4 {
