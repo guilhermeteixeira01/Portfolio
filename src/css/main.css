@@ -326,6 +326,8 @@ section h1 {
         animation: none;
         border-right: none;
         width: 100%;
+        white-space: normal;
+        overflow: visible;
     }
 
     .My h4 {
