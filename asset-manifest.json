@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.a8bc3a58.css",
-    "main.js": "/Portfolio/static/js/main.536636c6.js",
+    "main.js": "/Portfolio/static/js/main.40a87ef3.js",
     "static/js/453.a7d99afe.chunk.js": "/Portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/pull-shark-detail.png": "/Portfolio/static/media/pull-shark-detail.703e06b53eca62e9f719.png",
     "static/media/galaxy-brain-detail.png": "/Portfolio/static/media/galaxy-brain-detail.bb5c2d1a1f8f67389df0.png",
@@ -14,18 +14,18 @@
     "static/media/pull-shark.png": "/Portfolio/static/media/pull-shark.44fc2e9e56f635ec8ec9.png",
     "static/media/pair-extraordinaire.png": "/Portfolio/static/media/pair-extraordinaire.c02b732cdd779f92b2d8.png",
     "static/media/StarStruck.png": "/Portfolio/static/media/StarStruck.b2578d33d21d74abbade.png",
-    "static/media/quickdraw.png": "/Portfolio/static/media/quickdraw.40775c53bf175394bad7.png",
+    "static/media/quickdraw.png": "/Portfolio/static/media/quickdraw.d4402ccd18f7dc94a3c3.png",
     "static/media/yolo.png": "/Portfolio/static/media/yolo.28c64ec531eb0171bb6a.png",
     "static/media/RepoCalistenic.jpeg": "/Portfolio/static/media/RepoCalistenic.de3f0b92c243b78a7b0f.jpeg",
     "static/media/super-sonic.gif": "/Portfolio/static/media/super-sonic.47854e3267a601dbf392.gif",
     "static/media/AmxRepo.jfif": "/Portfolio/static/media/AmxRepo.81e95e2af79115011325.jfif",
     "index.html": "/Portfolio/index.html",
     "main.a8bc3a58.css.map": "/Portfolio/static/css/main.a8bc3a58.css.map",
-    "main.536636c6.js.map": "/Portfolio/static/js/main.536636c6.js.map",
+    "main.40a87ef3.js.map": "/Portfolio/static/js/main.40a87ef3.js.map",
     "453.a7d99afe.chunk.js.map": "/Portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8bc3a58.css",
-    "static/js/main.536636c6.js"
+    "static/js/main.40a87ef3.js"
   ]
 }
