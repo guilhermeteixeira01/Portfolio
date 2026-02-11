@@ -70,7 +70,7 @@ export default function StarCanvas() {
     }, [canvasSize]);
 
     return (
-        <div style={{ position: "absolute", width: "100vw", height: "100vh", overflow: "hidden" }}>
+        <div style={{ position: "absolute", marginTop: 80, width: "100vw", height: "90vh", overflow: "hidden" }}>
             <canvas
                 ref={canvasRef}
                 style={{ position: "absolute", inset: 0, zIndex: -1 }}
