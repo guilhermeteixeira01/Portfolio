@@ -10,16 +10,16 @@ export default function StarCanvas() {
     });
     const [sonics, setSonics] = useState([]);
 
-    // ✅ createSonic memorizado
-    const createSonic = useCallback(() => {
+    // ✅ createSonic NÃO depende mais de canvasSize
+    const createSonic = useCallback((height) => {
         return {
             id: Date.now() + Math.random(),
-            x: -10,
-            y: Math.random() * canvasSize.height * 0.7,
+            x: -60,
+            y: Math.random() * height * 0.7,
             speed: 1 + Math.random() * 2,
             size: 30 + Math.random() * 50,
         };
-    }, [canvasSize]);
+    }, []);
 
     // 🌌 Estrelas + resize
     useEffect(() => {
@@ -42,16 +42,16 @@ export default function StarCanvas() {
 
     // 🦔 Spawn de Sonics
     useEffect(() => {
-        setSonics([createSonic()]);
+        setSonics([createSonic(window.innerHeight)]);
 
         const interval = setInterval(() => {
-            setSonics(prev => [...prev, createSonic()]);
+            setSonics(prev => [...prev, createSonic(window.innerHeight)]);
         }, 15000);
 
         return () => clearInterval(interval);
     }, [createSonic]);
 
-    // 🎬 Animação
+    // 🎬 Animação (RODA APENAS UMA VEZ)
     useEffect(() => {
         let requestId;
 
@@ -59,20 +59,23 @@ export default function StarCanvas() {
             setSonics(prev =>
                 prev
                     .map(s => ({ ...s, x: s.x + s.speed }))
-                    .filter(s => s.x < canvasSize.width + s.size)
+                    .filter(s => s.x < window.innerWidth + s.size)
             );
 
             requestId = requestAnimationFrame(animate);
         }
 
-        animate();
+        requestId = requestAnimationFrame(animate);
+
         return () => cancelAnimationFrame(requestId);
-    }, [canvasSize]);
+    }, []);
 
     return (
         <div style={{ position: "absolute", marginTop: 80, width: "100vw", height: "90vh", overflow: "hidden" }}>
             <canvas
                 ref={canvasRef}
+                width={canvasSize.width}
+                height={canvasSize.height}
                 style={{ position: "absolute", inset: 0, zIndex: -1 }}
             />
 
