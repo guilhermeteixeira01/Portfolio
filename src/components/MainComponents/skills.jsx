@@ -13,7 +13,7 @@ export default function skills() {
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" data-aos="fade-up" data-aos-duration="1500" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" data-aos="fade-up" data-aos-duration="1500" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" data-aos="fade-up" data-aos-duration="1500" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" data-aos="fade-down" data-aos-duration="1500" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" data-aos="fade-down" data-aos-duration="1500" />         
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VSCode" data-aos="fade-up" data-aos-duration="1500" />
             </div>
         </section>

@@ -94,11 +94,11 @@ export default function Projects() {
                             <div className="desc-card">
                                 <p>Um projeto de aplicação web interativa que combina treino de calistenia (exercícios com o próprio peso) com um sistema de progressão gamificada.</p>
                                 <div className="boxlangs">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
-                                    <img src={FireBase} alt="FireBase" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="React" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" className="JavaScript" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" className="CSS"/>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" className="HTML"/>
+                                    <img src={FireBase} alt="FireBase" className="FireBase" />
                                 </div>
 
                                 <div className="boxdesclangs">
@@ -135,7 +135,7 @@ export default function Projects() {
                             <div className="desc-card">
                                 <p>ChatManager-MC é um plugin/mod para servidores Minecraft, escrito em Java, com foco em personalizar e gerenciar mensagens do chat do jogo.</p>
                                 <div className="boxlangs">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" className="Java" />
                                 </div>
 
                                 <div className="boxdesclangs">
@@ -168,7 +168,7 @@ export default function Projects() {
                             <div className="desc-card">
                                 <p>Este repositório contém plugins, addons e códigos fonte para servidores de Counter-Strike 1.6, com foco no modo Zumbi (Zombie Mod) e variações.</p>
                                 <div className="boxlangs">
-                                    <img src={PawnIcon} alt="Pawn" />
+                                    <img src={PawnIcon} alt="Pawn" className="Pawn"/>
                                 </div>
 
                                 <div className="boxdesclangs">
