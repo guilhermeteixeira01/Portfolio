@@ -4,7 +4,7 @@ import RepoAmxx from '../../img/projects/AmxRepo.jfif';
 import RepoChatMc from '../../img/projects/ChatManagerRepo.jpg';
 import RepoCalistenic from '../../img/projects/RepoCalistenic.jpeg';
 
-import { PawnIcon, FireBase } from "../constants";
+import { PawnIcon, FireBase } from "../../constants/constants";
 
 export default function Projects() {
     const repos = useMemo(() => [
