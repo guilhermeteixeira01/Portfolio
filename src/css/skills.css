@@ -143,7 +143,7 @@
     .skills-container {
         gap: 30px;
         padding: 10px 0;
-        max-width: 55%;
+        max-width: 50%;
     }
 
     .skills-container img,

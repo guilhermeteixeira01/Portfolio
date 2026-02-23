@@ -46,7 +46,7 @@ export default function Header({ username = "guilhermeteixeira01", repo = "Portf
         } else {
             document.documentElement.style.setProperty('--color-galaxy1', '#1b2735 0%');
             document.documentElement.style.setProperty('--color-galaxy2', '#090a0f 100%');
-            document.documentElement.style.setProperty('--gradient1-boxproject', 'rgba(194, 194, 194, 0.7)');
+            document.documentElement.style.setProperty('--gradient1-boxproject', 'rgba(255, 255, 255, 0.3)');
         }
     }, [isDarkMode]);
 
