@@ -96,6 +96,7 @@
 
 .boxlangs img {
     width: 36px;
+    padding: 7px;
     border-radius: 5px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.01));
 }
