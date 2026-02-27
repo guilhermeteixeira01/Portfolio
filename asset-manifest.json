@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.93cf3e73.css",
+    "main.css": "/Portfolio/static/css/main.ac0c0fd7.css",
     "main.js": "/Portfolio/static/js/main.e9a85f03.js",
     "static/js/453.a7d99afe.chunk.js": "/Portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/minecraft.jpeg": "/Portfolio/static/media/minecraft.7a5207e5555f93bba041.jpeg",
@@ -20,12 +20,12 @@
     "static/media/super-sonic.gif": "/Portfolio/static/media/super-sonic.47854e3267a601dbf392.gif",
     "static/media/solo leveling.jpg": "/Portfolio/static/media/solo leveling.6a946dfe39a59ebe3eaf.jpg",
     "index.html": "/Portfolio/index.html",
-    "main.93cf3e73.css.map": "/Portfolio/static/css/main.93cf3e73.css.map",
+    "main.ac0c0fd7.css.map": "/Portfolio/static/css/main.ac0c0fd7.css.map",
     "main.e9a85f03.js.map": "/Portfolio/static/js/main.e9a85f03.js.map",
     "453.a7d99afe.chunk.js.map": "/Portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93cf3e73.css",
+    "static/css/main.ac0c0fd7.css",
     "static/js/main.e9a85f03.js"
   ]
 }
