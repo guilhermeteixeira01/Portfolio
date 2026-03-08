@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.2fb36a06.css",
-    "main.js": "/Portfolio/static/js/main.f2b1b631.js",
+    "main.js": "/Portfolio/static/js/main.e168a8c6.js",
     "static/js/453.a7d99afe.chunk.js": "/Portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/minecraft.jpeg": "/Portfolio/static/media/minecraft.7a5207e5555f93bba041.jpeg",
     "static/media/pull-shark-detail.png": "/Portfolio/static/media/pull-shark-detail.703e06b53eca62e9f719.png",
@@ -21,11 +21,11 @@
     "static/media/solo leveling.jpg": "/Portfolio/static/media/solo leveling.6a946dfe39a59ebe3eaf.jpg",
     "index.html": "/Portfolio/index.html",
     "main.2fb36a06.css.map": "/Portfolio/static/css/main.2fb36a06.css.map",
-    "main.f2b1b631.js.map": "/Portfolio/static/js/main.f2b1b631.js.map",
+    "main.e168a8c6.js.map": "/Portfolio/static/js/main.e168a8c6.js.map",
     "453.a7d99afe.chunk.js.map": "/Portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2fb36a06.css",
-    "static/js/main.f2b1b631.js"
+    "static/js/main.e168a8c6.js"
   ]
 }
