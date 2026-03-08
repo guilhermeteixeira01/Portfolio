@@ -101,33 +101,45 @@
     background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
     box-shadow: 0 5px 10px black;
 }
-.boxlangs .React{
+
+.boxlangs .React {
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 255, 213, 0.4));
     box-shadow: 0 5px 10px #15c0b7;
 }
-.boxlangs .JavaScript{
+
+.boxlangs .JavaScript {
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 208, 0, 0.4));
     box-shadow: 0 5px 10px #c0a615;
 }
-.boxlangs .HTML{
+
+.boxlangs .HTML {
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 94, 0, 0.4));
     box-shadow: 0 5px 10px #c04b15;
 }
+
 .boxlangs .CSS {
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 132, 255, 0.4));
     box-shadow: 0 5px 10px #1559c0;
 }
+
 .boxlangs .FireBase {
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 255, 0, 0.4));
     box-shadow: 0 5px 10px #c0c015;
 }
+
 .boxlangs .Java {
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 0, 0, 0.4));
     box-shadow: 0 5px 10px #c01515;
 }
-.boxlangs .Pawn{
+
+.boxlangs .Pawn {
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 255, 255, 0.4));
     box-shadow: 0 5px 10px #f8f8f8;
+}
+
+.boxlangs .Nodejs {
+    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 255, 0, 0.4));
+    box-shadow: 0 5px 10px #15c015;
 }
 
 .boxlangs img:hover {
