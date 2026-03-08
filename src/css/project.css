@@ -41,8 +41,8 @@
         width: 40px;
         height: 40px;
         padding: 5px;
-        color: #00bfff;
-        background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
+        fill: #fff;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.01));
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
         border-radius: 10px;
     }
@@ -96,43 +96,38 @@
 
 .boxlangs img {
     width: 36px;
+    padding: 7px;
     border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
-    box-shadow: 0 5px 10px black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.01));
 }
-
-.boxlangs .React {
+.boxlangs .React{
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 255, 213, 0.4));
     box-shadow: 0 5px 10px #15c0b7;
 }
-
-.boxlangs .JavaScript {
+.boxlangs .JavaScript{
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 208, 0, 0.4));
     box-shadow: 0 5px 10px #c0a615;
 }
-
-.boxlangs .HTML {
+.boxlangs .HTML{
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 94, 0, 0.4));
     box-shadow: 0 5px 10px #c04b15;
 }
 
 .boxlangs .CSS {
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 132, 255, 0.4));
-    box-shadow: 0 5px 10px #1559c0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 132, 255, 0.4));
+    box-shadow: 0 0 10px #1559c0;
 }
 
 .boxlangs .FireBase {
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 255, 0, 0.4));
-    box-shadow: 0 5px 10px #c0c015;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 0, 0.4));
+    box-shadow: 0 0 10px #c0c015;
 }
 
 .boxlangs .Java {
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 0, 0, 0.4));
-    box-shadow: 0 5px 10px #c01515;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 0, 0, 0.4));
+    box-shadow: 0 0 10px #c01515;
 }
-
-.boxlangs .Pawn {
+.boxlangs .Pawn{
     background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 255, 255, 0.4));
     box-shadow: 0 5px 10px #f8f8f8;
 }
@@ -160,7 +155,7 @@
         padding: 2px 5px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 2px;
-        background: linear-gradient(180deg, var(--gradient1-boxproject), rgba(255, 255, 255, 0.01));
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.01));
         box-shadow: 0 5px 10px black;
         font-size: 10px;
     }
@@ -179,12 +174,12 @@
 }
 
 .boximg img {
-    border: 2px solid #00bfff9d;
+    border: 2px solid snow;
     width: 210px;
     height: 120px;
     object-fit: contain;
     object-position: center;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 5px 15px black;
     background-color: #111;
 }

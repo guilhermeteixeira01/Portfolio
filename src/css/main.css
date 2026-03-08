@@ -86,7 +86,7 @@ section h1 {
 .My h1 {
     font-size: 80px;
     margin: 0;
-    background: linear-gradient(90deg, #1e90ff, #00bfff);
+    background: linear-gradient(90deg, #ff1e1e, #00bfff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
