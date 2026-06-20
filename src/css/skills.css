@@ -17,8 +17,6 @@
     height: 120px;
     padding: 15px;
     border-radius: 15px;
-    filter: drop-shadow(0 0 2px #ffffff0e) drop-shadow(0 0 5px #ffffff0e);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.2);
     transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
     cursor: pointer;
 }
@@ -29,7 +27,6 @@
 .skills-container img:nth-child(1):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #c04b15;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(2){
@@ -39,7 +36,6 @@
 .skills-container img:nth-child(2):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #1559c0;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(3){
@@ -49,7 +45,6 @@
 .skills-container img:nth-child(3):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #c0a615;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(4){
@@ -59,7 +54,6 @@
 .skills-container img:nth-child(4):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #15c0b7;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(5){
@@ -69,7 +63,6 @@
 .skills-container img:nth-child(5):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #f8f8f8;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(6){
@@ -79,7 +72,6 @@
 .skills-container img:nth-child(6):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #4bc015;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(7){
@@ -89,7 +81,6 @@
 .skills-container img:nth-child(7):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #c01515;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(8){
@@ -99,7 +90,6 @@
 .skills-container img:nth-child(8):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #c04b15;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(9){
@@ -109,7 +99,6 @@
 .skills-container img:nth-child(9):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #000000;
-    filter: brightness(1.2);
 }
 
 .skills-container img:nth-child(10){
@@ -119,7 +108,6 @@
 .skills-container img:nth-child(10):hover{
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px #1559c0;
-    filter: brightness(1.2);
 }
 
 /* Responsivo: ajusta ícones menores em telas pequenas */
