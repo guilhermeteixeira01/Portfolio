@@ -1,116 +1,119 @@
-@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
-
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 35px;
     justify-items: center;
     align-items: center;
     padding: 20px;
     max-width: 70%;
 }
 
-/* Cada “tecla” */
-.skills-container img {
-    font-size: 85px;
+/* Cada "tecla" */
+.skills-container .key {
+    --key-top: #7a8696;
+    --key-base: #4f5866;
+    --key-shadow: #262b32;
+
     width: 120px;
     height: 120px;
-    padding: 15px;
-    border-radius: 15px;
-    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    box-sizing: border-box;
+
+    background: linear-gradient(165deg, var(--key-top), var(--key-base));
+    box-shadow:
+        inset 0 2px 1px rgba(255, 255, 255, 0.25),
+        inset 0 -10px 12px -8px rgba(0, 0, 0, 0.35),
+        0 7px 0 0 var(--key-shadow),
+        0 14px 20px -6px rgba(0, 0, 0, 0.45);
+
+    transform: translateY(0);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
-.skills-container img:nth-child(1){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 94, 0, 0.4));
-}
-.skills-container img:nth-child(1):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #c04b15;
-}
-
-.skills-container img:nth-child(2){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 132, 255, 0.4));
+.skills-container .key img {
+    width: 60%;
+    height: 60%;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+    pointer-events: none;
 }
 
-.skills-container img:nth-child(2):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #1559c0;
+.skills-container .key:hover,
+.skills-container .key:active {
+    transform: translateY(6px);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.2),
+        inset 0 -3px 6px -4px rgba(0, 0, 0, 0.35),
+        0 1px 0 0 var(--key-shadow),
+        0 4px 8px -2px rgba(0, 0, 0, 0.4);
 }
 
-.skills-container img:nth-child(3){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 208, 0, 0.4));
+/* Cores de cada tecla, mantendo a paleta original */
+.skills-container .key:nth-child(1) {
+    --key-top: #e8915a;
+    --key-base: #c0581a;
+    --key-shadow: #6e2d10;
 }
 
-.skills-container img:nth-child(3):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #c0a615;
+.skills-container .key:nth-child(2) {
+    --key-top: #6fa8e8;
+    --key-base: #2a64b8;
+    --key-shadow: #163a6e;
 }
 
-.skills-container img:nth-child(4){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 255, 213, 0.4));
+.skills-container .key:nth-child(3) {
+    --key-top: #e8c94d;
+    --key-base: #cfa510;
+    --key-shadow: #705a08;
 }
 
-.skills-container img:nth-child(4):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #15c0b7;
+.skills-container .key:nth-child(4) {
+    --key-top: #5cd4c7;
+    --key-base: #1d9e90;
+    --key-shadow: #155460;
 }
 
-.skills-container img:nth-child(5){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 255, 255, 0.4));
+.skills-container .key:nth-child(5) {
+    --key-top: #d8d8d8;
+    --key-base: #8a8a8a;
+    --key-shadow: #5a5a5a;
 }
 
-.skills-container img:nth-child(5):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #f8f8f8;
+.skills-container .key:nth-child(6) {
+    --key-top: #82e85c;
+    --key-base: #4bb015;
+    --key-shadow: #2d6e10;
 }
 
-.skills-container img:nth-child(6){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(115, 255, 0, 0.4));
+.skills-container .key:nth-child(7) {
+    --key-top: #e8625c;
+    --key-base: #c01515;
+    --key-shadow: #6e1010;
 }
 
-.skills-container img:nth-child(6):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #4bc015;
+.skills-container .key:nth-child(8) {
+    --key-top: #e8915a;
+    --key-base: #c0581a;
+    --key-shadow: #6e2d10;
 }
 
-.skills-container img:nth-child(7){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 0, 0, 0.4));
+.skills-container .key:nth-child(9) {
+    --key-top: #5a5a5a;
+    --key-base: #2b2b2b;
+    --key-shadow: #000000;
 }
 
-.skills-container img:nth-child(7):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #c01515;
+.skills-container .key:nth-child(10) {
+    --key-top: #6fa8e8;
+    --key-base: #2a64b8;
+    --key-shadow: #163a6e;
 }
 
-.skills-container img:nth-child(8){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(255, 94, 0, 0.4));
-}
-
-.skills-container img:nth-child(8):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #c04b15;
-}
-
-.skills-container img:nth-child(9){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(78, 78, 78, 0.4));
-}
-
-.skills-container img:nth-child(9):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #000000;
-}
-
-.skills-container img:nth-child(10){
-    background: linear-gradient(to bottom, var(--gradient1-boxproject), rgba(0, 132, 255, 0.4));
-}
-
-.skills-container img:nth-child(10):hover{
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px #1559c0;
-}
-
-/* Responsivo: ajusta ícones menores em telas pequenas */
+/* Responsivo: ajusta teclas menores em telas pequenas */
 @media (max-width: 900px) {
     .skills-container {
         grid-template-columns: repeat(3, 1fr);
@@ -119,25 +122,24 @@
         max-width: 100%;
     }
 
-    .skills-container img,
-    .skills-container i {
-        font-size: 38px;
+    .skills-container .key {
         width: 70px;
         height: 70px;
+        padding: 12px;
+        border-radius: 14px;
     }
 }
 
 @media (orientation: landscape) and (max-height: 768px) {
     .skills-container {
-        gap: 30px;
+        gap: 24px;
         padding: 10px 0;
         max-width: 50%;
     }
 
-    .skills-container img,
-    .skills-container i {
-        font-size: 50px;
+    .skills-container .key {
         width: 100px;
         height: 100px;
+        padding: 16px;
     }
 }
