@@ -1,5 +1,5 @@
 import { achievements, education, profile } from "../data/profile";
-import { GradIcon } from "./Icons";
+import { ArrowUpRight, GradIcon } from "./Icons";
 import SectionHeader from "./SectionHeader";
 
 const graph = (variant) =>
@@ -19,10 +19,18 @@ export default function Education({ theme }) {
                   <GradIcon width={16} height={16} />
                 </span>
                 <div className="card timeline__card">
-                  <span className="mono muted small">{e.period}</span>
+                  {e.period && <span className="mono muted small">{e.period}</span>}
                   <h3>{e.title}</h3>
-                  <p>{e.institution}</p>
-                  <p className="muted small">{e.detail}</p>
+                  <p>
+                    {e.href ? (
+                      <a href={e.href} target="_blank" rel="noreferrer" className="timeline__link">
+                        {e.institution} <ArrowUpRight width={13} height={13} />
+                      </a>
+                    ) : (
+                      e.institution
+                    )}
+                  </p>
+                  {e.detail && <p className="muted small">{e.detail}</p>}
                 </div>
               </li>
             ))}

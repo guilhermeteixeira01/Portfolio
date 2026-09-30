@@ -17,6 +17,8 @@ const PAWN_ICON =
 export const profile = {
   name: "Guilherme Teixeira",
   role: "Desenvolvedor Full Stack",
+  // Palavras que alternam na linha "// especialista em ..." do topo.
+  roles: ["Sites & Sistemas Web", "Aplicativos", "Plugins para Jogos", "Servidores de Jogos", "APIs & Back-end"],
   location: "Brasil",
   available: true,
   github: "guilhermeteixeira01",
@@ -109,10 +111,20 @@ export const education = [
     detail: "Duração de 1 ano e meio",
   },
   {
-    title: "Certificado — Curso de JavaScript",
+    title: "Curso de JavaScript",
     institution: "Curso em Vídeo",
     period: "Concluído em 2021",
-    detail: "40 horas",
+  },
+  {
+    title: "Curso de JavaScript com Node.js",
+    institution: "Rincko Dev",
+    href: "https://www.youtube.com/watch?v=lQAJ-T1QTYc&list=PL9tY_tDo_Q0C0hs1aGgtJbEH1EBlyzZdG",
+    period: "Concluído em 2021",
+  },
+  {
+    title: "Curso de HTML e CSS",
+    institution: "Curso em Vídeo",
+    period: "Concluído em 2020",
   },
 ];
 

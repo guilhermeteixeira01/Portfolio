@@ -1,21 +1,38 @@
 import { profile } from "../data/profile";
+import { useCountUp } from "../hooks/useCountUp";
 import { useGithub } from "../hooks/useGithub";
 import { ArrowUpRight, DownloadIcon, GithubIcon, LinkedinIcon, MapPinIcon } from "./Icons";
+import RotatingWords from "./RotatingWords";
+
+function Stat({ label, value, from }) {
+  const shown = useCountUp(value, { from });
+  return (
+    <div>
+      <dt>{label}</dt>
+      <dd>{shown ?? "—"}</dd>
+    </div>
+  );
+}
+
+// Pequeno "syntax highlight" para o bloco de código do cartão.
+const S = ({ children }) => <span className="tok-str">{children}</span>;
+const K = ({ children }) => <span className="tok-key">{children}</span>;
+const P = ({ children }) => <span className="tok-prop">{children}</span>;
 
 export default function Hero() {
   const { data: user } = useGithub(`/users/${profile.github}`);
-
-  const stats = [
-    { label: "Repositórios públicos", value: user?.public_repos },
-    { label: "Seguidores", value: user?.followers },
-    { label: "No GitHub desde", value: user ? new Date(user.created_at).getFullYear() : undefined },
-  ];
+  const firstName = profile.name.split(" ")[0];
+  const since = user ? new Date(user.created_at).getFullYear() : undefined;
 
   return (
     <section id="inicio" className="hero">
-      <div className="hero__glow" aria-hidden="true" />
+      <div className="hero__aurora" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className="container hero__grid">
-        <div className="hero__content" data-reveal>
+        <div className="hero__content hero-enter">
           {profile.available && (
             <span className="badge">
               <span className="badge__dot" />
@@ -29,10 +46,13 @@ export default function Hero() {
             {profile.role}
             <span className="mono"> /&gt;</span>
           </p>
+          <p className="hero__focus mono">
+            <span className="muted">{"// especialista em"}</span> <RotatingWords words={profile.roles} />
+          </p>
           <p className="hero__lead">{profile.headline}</p>
 
           <div className="hero__cta">
-            <a href={`${profile.links.github}?tab=repositories`} className="btn btn--primary" target="_blank" rel="noreferrer">
+            <a href={`${profile.links.github}?tab=repositories`} className="btn btn--primary btn--shine" target="_blank" rel="noreferrer">
               Ver projetos <ArrowUpRight width={16} height={16} />
             </a>
             <a href={profile.resume} className="btn btn--ghost" target="_blank" rel="noreferrer">
@@ -53,32 +73,45 @@ export default function Hero() {
           </div>
         </div>
 
-        <aside className="profile-card" data-reveal style={{ "--delay": "120ms" }}>
+        <aside className="profile-card card float-in">
           <div className="profile-card__head">
-            <img src={profile.avatar} alt={`Foto de ${profile.name}`} className="profile-card__avatar" />
+            <span className="profile-card__avatar-ring">
+              <img src={profile.avatar} alt={`Foto de ${profile.name}`} className="profile-card__avatar" />
+            </span>
             <div>
               <strong>{profile.name}</strong>
               <span className="mono muted">@{profile.github}</span>
             </div>
           </div>
-          <pre className="code-block" aria-label="Resumo em código">
-{`const dev = {
-  nome: "${profile.name.split(" ")[0]}",
-  foco: ["Web", "Apps", "Games"],
-  stack: ["React", "Node", "Java", "C++"],
-  desenrola: "em tudo",
-};`}
-          </pre>
+
+          <div className="code-window">
+            <div className="code-window__bar" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <span className="mono">dev.js</span>
+            </div>
+            <pre className="code-block" aria-label="Resumo em código">
+              <K>const</K> dev = {"{"}
+              {"\n  "}<P>nome</P>: <S>"{firstName}"</S>,
+              {"\n  "}<P>foco</P>: [<S>"Web"</S>, <S>"Apps"</S>, <S>"Games"</S>],
+              {"\n  "}<P>stack</P>: [<S>"React"</S>, <S>"Node"</S>, <S>"Java"</S>, <S>"C++"</S>],
+              {"\n  "}<P>desenrola</P>: <S>"em tudo"</S>,
+              {"\n"}{"};"}
+              <span className="typewriter__cursor" />
+            </pre>
+          </div>
+
           <dl className="profile-card__stats">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <dt>{s.label}</dt>
-                <dd>{s.value ?? "—"}</dd>
-              </div>
-            ))}
+            <Stat label="Repositórios" value={user?.public_repos} />
+            <Stat label="Seguidores" value={user?.followers} />
+            <Stat label="No GitHub desde" value={since} from={since ? since - 20 : 0} />
           </dl>
         </aside>
       </div>
+      <a href="#sobre" className="scroll-cue" aria-label="Rolar para a próxima seção">
+        <span />
+      </a>
     </section>
   );
 }

@@ -21,7 +21,7 @@ function ProjectCard({ project, index }) {
           {project.featured && <span className="tag tag--accent">Destaque</span>}
           <div className="project__stats mono">
             <span title="Estrelas">
-              <StarIcon width={14} height={14} /> {data?.stargazers_count ?? "—"}
+              <StarIcon width={14} height={14} className="star-icon" /> {data?.stargazers_count ?? "—"}
             </span>
             <span title="Forks">
               <ForkIcon width={14} height={14} /> {data?.forks_count ?? "—"}
