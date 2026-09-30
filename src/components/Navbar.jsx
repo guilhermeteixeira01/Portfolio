@@ -16,7 +16,7 @@ export default function Navbar({ theme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const [progress, setProgress] = useState(0);
-  const { data: repo } = useGithub(`/repos/${profile.github}/${profile.portfolioRepo}`);
+  const repo = useGithub().repos[profile.portfolioRepo];
 
   useEffect(() => {
     const onScroll = () => {
@@ -80,7 +80,7 @@ export default function Navbar({ theme, onToggleTheme }) {
           >
             <GithubIcon width={15} height={15} />
             <StarIcon width={13} height={13} />
-            <span>{repo ? repo.stargazers_count : "—"}</span>
+            <span>{repo?.stars ?? "—"}</span>
           </a>
           <button
             className="icon-btn"

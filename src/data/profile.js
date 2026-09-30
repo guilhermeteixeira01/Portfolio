@@ -33,6 +33,7 @@ export const profile = {
   links: {
     github: "https://github.com/guilhermeteixeira01",
     linkedin: "https://www.linkedin.com/in/guilherme-teixeira-86499732a/",
+    whatsapp: "https://wa.me/5561999647021",
     // Preencha para exibir o botão de e-mail na seção de contato.
     email: "",
   },

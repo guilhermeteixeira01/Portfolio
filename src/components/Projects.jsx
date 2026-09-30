@@ -5,7 +5,7 @@ import SectionHeader from "./SectionHeader";
 
 function ProjectCard({ project, index }) {
   const url = `https://github.com/${profile.github}/${project.repo}`;
-  const { data } = useGithub(`/repos/${profile.github}/${project.repo}`);
+  const data = useGithub().repos[project.repo];
 
   return (
     <article
@@ -21,10 +21,10 @@ function ProjectCard({ project, index }) {
           {project.featured && <span className="tag tag--accent">Destaque</span>}
           <div className="project__stats mono">
             <span title="Estrelas">
-              <StarIcon width={14} height={14} className="star-icon" /> {data?.stargazers_count ?? "—"}
+              <StarIcon width={14} height={14} className="star-icon" /> {data?.stars ?? "—"}
             </span>
             <span title="Forks">
-              <ForkIcon width={14} height={14} /> {data?.forks_count ?? "—"}
+              <ForkIcon width={14} height={14} /> {data?.forks ?? "—"}
             </span>
           </div>
         </div>

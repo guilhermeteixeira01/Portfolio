@@ -1,5 +1,5 @@
 import { profile } from "../data/profile";
-import { GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, MailIcon, WhatsappIcon } from "./Icons";
 
 export default function Contact() {
   const { links } = profile;
@@ -18,12 +18,17 @@ export default function Contact() {
               rápido.
             </p>
             <div className="contact__actions">
+              {links.whatsapp && (
+                <a href={links.whatsapp} target="_blank" rel="noreferrer" className="btn btn--whatsapp">
+                  <WhatsappIcon width={16} height={16} /> WhatsApp
+                </a>
+              )}
               {links.email && (
-                <a href={`mailto:${links.email}`} className="btn btn--primary">
+                <a href={`mailto:${links.email}`} className="btn btn--ghost">
                   <MailIcon width={16} height={16} /> {links.email}
                 </a>
               )}
-              <a href={links.linkedin} target="_blank" rel="noreferrer" className={`btn ${links.email ? "btn--ghost" : "btn--primary"}`}>
+              <a href={links.linkedin} target="_blank" rel="noreferrer" className="btn btn--ghost">
                 <LinkedinIcon width={16} height={16} /> LinkedIn
               </a>
               <a href={links.github} target="_blank" rel="noreferrer" className="btn btn--ghost">

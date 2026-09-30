@@ -211,6 +211,14 @@ html {
   background: var(--accent);
   color: #fff;
 }
+.btn--whatsapp {
+  background: #25d366;
+  color: #0b1f12;
+}
+.btn--whatsapp:hover {
+  background: #1ebe5b;
+  box-shadow: 0 10px 30px -12px rgba(37, 211, 102, 0.7);
+}
 .btn--ghost {
   border-color: var(--border-strong);
   background: var(--surface);
@@ -235,6 +243,10 @@ html {
 .icon-btn:hover {
   color: var(--text);
   border-color: var(--border-strong);
+}
+.icon-btn--whatsapp:hover {
+  color: #25d366;
+  border-color: rgba(37, 211, 102, 0.5);
 }
 
 .chip {

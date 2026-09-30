@@ -8,10 +8,13 @@
   <a href="https://guilhermeteixeira01.github.io/Portfolio"><img src="https://img.shields.io/badge/Ver%20site-4F5EE8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Ver site" /></a>
   <a href="https://guilhermeteixeira01.github.io/Portfolio/resume.pdf"><img src="https://img.shields.io/badge/Curr%C3%ADculo-181717?style=for-the-badge&logo=readdotcv&logoColor=white" alt="Currículo" /></a>
   <a href="https://www.linkedin.com/in/guilherme-teixeira-86499732a/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://wa.me/5561999647021"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" /></a>
 </p>
 
 <p align="center">
-  <img src="docs/preview.png" alt="Prévia do portfólio" width="900" />
+  <img src="docs/preview.png" alt="Prévia do portfólio no desktop" width="720" />
+  &nbsp;
+  <img src="docs/preview-mobile.png" alt="Prévia do portfólio no celular" width="170" />
 </p>
 
 ## Sobre
@@ -20,10 +23,11 @@ Meu portfólio pessoal, feito em React. Reúne quem eu sou, as tecnologias que u
 
 ## Destaques
 
-- **Design limpo e responsivo**, pensado para desktop, tablet e celular.
+- **Design limpo e responsivo**, pensado para desktop, tablet e celular, com layout centralizado no mobile.
 - **Tema claro e escuro**, que segue a preferência do sistema e fica salvo no navegador.
-- **Dados ao vivo do GitHub**: estrelas e forks dos projetos, repositórios, seguidores e estrelas do próprio portfólio.
-- **Animações leves** de entrada, que respeitam a opção de reduzir animações do sistema.
+- **Dados ao vivo do GitHub**: estrelas e forks dos projetos, repositórios, seguidores e estrelas do próprio portfólio. Usa só 2 requisições, guarda cache de 1 hora e, se a API estiver fora do ar ou no limite, mostra um retrato gerado no build.
+- **Animações**: entrada escalonada no topo, fundo "aurora" animado, palavras que alternam, contagem nos números do GitHub, faixa infinita de tecnologias, brilho que segue o mouse nos cards e barra de progresso de leitura. Tudo respeita a opção de reduzir animações do sistema.
+- **Identidade visual própria**: favicon exclusivo e logo `<Guilherme />` no estilo do site.
 - **Sem dependências extras**: só React, com CSS puro e ícones em SVG.
 - **Conteúdo centralizado** em um único arquivo, fácil de manter.
 - **Currículo em PDF** gerado a partir de um HTML versionado no repositório.
@@ -55,7 +59,7 @@ O site abre em `http://localhost:3000/Portfolio`.
 | :-- | :-- |
 | `npm start` | Servidor de desenvolvimento |
 | `npm test` | Roda os testes |
-| `npm run build` | Gera a versão de produção em `build/` |
+| `npm run build` | Gera a versão de produção em `build/` (antes, atualiza o retrato dos dados do GitHub) |
 | `npm run deploy` | Publica o build no GitHub Pages |
 | `npm run resume` | Regera `public/resume.pdf` a partir de `resume/curriculo.html` (usa Edge ou Chrome) |
 
@@ -64,9 +68,12 @@ O site abre em `http://localhost:3000/Portfolio`.
 ```
 src/
 ├── data/profile.js     # Todo o conteúdo: textos, skills, projetos, formação, links
-├── components/         # Navbar, Hero, About, Projects, Education, Contact, ícones
-├── hooks/              # useGithub (API), useTheme (claro/escuro), useReveal (animações)
-└── styles.css          # Design system: cores, tipografia e layout
+├── components/         # Navbar, Hero, Marquee, About, Projects, Education, Contact, RotatingWords, ícones
+├── hooks/              # useGithub (API), useTheme (claro/escuro), useReveal, useCountUp, useSpotlight (animações)
+└── styles.css          # Design system: cores, tipografia, layout e animações
+public/
+├── favicon.svg         # Favicon (também em .ico e PNGs para iOS/Android)
+└── resume.pdf          # Currículo gerado
 resume/
 ├── curriculo.html      # Fonte do currículo
 └── build.js            # Gera o PDF
@@ -81,6 +88,7 @@ resume/
 ## Contato
 
 - **E-mail:** guilherme.teixeira00@outlook.com
+- **WhatsApp:** [(61) 99964-7021](https://wa.me/5561999647021)
 - **LinkedIn:** [guilherme-teixeira-86499732a](https://www.linkedin.com/in/guilherme-teixeira-86499732a/)
 - **GitHub:** [@guilhermeteixeira01](https://github.com/guilhermeteixeira01)
 

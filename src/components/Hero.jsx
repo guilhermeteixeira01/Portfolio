@@ -1,7 +1,7 @@
 import { profile } from "../data/profile";
 import { useCountUp } from "../hooks/useCountUp";
 import { useGithub } from "../hooks/useGithub";
-import { ArrowUpRight, DownloadIcon, GithubIcon, LinkedinIcon, MapPinIcon } from "./Icons";
+import { ArrowUpRight, DownloadIcon, GithubIcon, LinkedinIcon, MapPinIcon, WhatsappIcon } from "./Icons";
 import RotatingWords from "./RotatingWords";
 
 function Stat({ label, value, from }) {
@@ -20,9 +20,8 @@ const K = ({ children }) => <span className="tok-key">{children}</span>;
 const P = ({ children }) => <span className="tok-prop">{children}</span>;
 
 export default function Hero() {
-  const { data: user } = useGithub(`/users/${profile.github}`);
+  const { user } = useGithub();
   const firstName = profile.name.split(" ")[0];
-  const since = user ? new Date(user.created_at).getFullYear() : undefined;
 
   return (
     <section id="inicio" className="hero">
@@ -67,6 +66,11 @@ export default function Hero() {
             <a href={profile.links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="icon-btn">
               <LinkedinIcon />
             </a>
+            {profile.links.whatsapp && (
+              <a href={profile.links.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="icon-btn icon-btn--whatsapp">
+                <WhatsappIcon />
+              </a>
+            )}
             <span className="hero__location">
               <MapPinIcon width={15} height={15} /> {profile.location}
             </span>
@@ -105,7 +109,7 @@ export default function Hero() {
           <dl className="profile-card__stats">
             <Stat label="Repositórios" value={user?.public_repos} />
             <Stat label="Seguidores" value={user?.followers} />
-            <Stat label="No GitHub desde" value={since} from={since ? since - 20 : 0} />
+            <Stat label="No GitHub desde" value={user.since} from={user.since - 20} />
           </dl>
         </aside>
       </div>
